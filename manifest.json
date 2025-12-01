@@ -1,0 +1,17 @@
+{
+  "name": "The Singularity II",
+  "short_name": "Singularity",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00ffcc",
+  "description": "The Apex of Digital Sovereignty. Neural Matrix Vault Access.",
+  "icons": [
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "portrait-primary"
+}
