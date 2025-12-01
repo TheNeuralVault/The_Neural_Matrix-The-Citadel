@@ -1,18 +1,20 @@
 :root {
     --void: #030303;
     --cyan: #00F0FF; 
-    --gold: #FFD700; /* The Empire Expansion Gold */
-    --glass-surface: rgba(10, 10, 10, 0.65);
-    --glass-border: 1px solid rgba(0, 240, 255, 0.2);
+    --gold: #FFD700;
+    --glass-surface: rgba(10, 10, 10, 0.85);
+    --glass-border: 1px solid rgba(0, 240, 255, 0.3);
     --font-code: 'Courier New', Courier, monospace;
 }
 
 body {
     margin: 0;
     background-color: var(--void);
-    overflow: hidden;
+    overflow: hidden; /* Prevents scrollbars */
     font-family: var(--font-code);
     color: white;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* CANVAS LAYER */
@@ -23,70 +25,87 @@ body {
     width: 100%;
     height: 100%;
     z-index: 0;
-    filter: contrast(1.2) brightness(0.8);
 }
 
 /* UI LAYER */
 .hud-container {
     position: relative;
     z-index: 10;
-    height: 100vh;
+    height: 100%; /* Full height */
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at center, transparent 0%, var(--void) 120%);
+    padding: 20px; /* Safety padding for mobile edges */
+    box-sizing: border-box; /* Ensures padding doesn't break width */
 }
 
-/* TOP BANNER (From Screenshot) */
+/* TOP BANNER */
 .imperial-banner {
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: 20px;
+    left: 50%; /* Center it */
+    transform: translateX(-50%); /* Center align correction */
+    width: 90%;
+    max-width: 500px;
     border: 1px solid var(--gold);
     color: var(--gold);
-    padding: 10px 20px;
-    font-size: 0.8rem;
+    padding: 10px;
+    font-size: 0.7rem;
     letter-spacing: 2px;
     background: rgba(255, 215, 0, 0.05);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .blink { animation: blinker 1s linear infinite; }
 @keyframes blinker { 50% { opacity: 0; } }
 
 /* TYPOGRAPHY */
+.command-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .mega-glitch {
-    font-size: 5rem;
+    /* Fluid typography: Scales with screen width */
+    font-size: clamp(2rem, 8vw, 5rem); 
     margin: 0;
-    letter-spacing: -5px;
-    text-shadow: 0 0 20px var(--cyan);
+    letter-spacing: -2px;
+    text-shadow: 0 0 15px var(--cyan);
     position: relative;
     color: white;
+    text-align: center;
+    line-height: 1.1;
 }
 
 .sub-command {
     color: var(--cyan);
-    letter-spacing: 5px;
-    font-size: 0.9rem;
-    margin-bottom: 50px;
+    letter-spacing: 3px;
+    font-size: clamp(0.7rem, 3vw, 1rem);
+    margin-bottom: 40px;
     opacity: 0.8;
     text-transform: uppercase;
+    text-align: center;
 }
 
-/* THE INPUT MECHANISM (The Gun) */
+/* THE INPUT MECHANISM (Responsive) */
 .input-lock-mechanism {
     position: relative;
-    width: 600px;
+    width: 100%;
+    max-width: 600px; /* Never wider than this */
     display: flex;
+    flex-direction: row; /* Default: Side by side */
     border: 1px solid var(--cyan);
     background: var(--glass-surface);
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px rgba(0, 240, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
     transition: all 0.3s ease;
-}
-
-.input-lock-mechanism:hover {
-    box-shadow: 0 0 50px rgba(0, 240, 255, 0.2);
 }
 
 input {
@@ -94,48 +113,72 @@ input {
     border: none;
     color: white;
     font-family: var(--font-code);
-    font-size: 1.2rem;
-    padding: 20px;
+    font-size: 1rem;
+    padding: 15px;
     width: 100%;
     outline: none;
     text-transform: uppercase;
 }
 
 button {
-    background: var(--cyan);
-    border: none;
-    color: black;
+    background: rgba(0, 240, 255, 0.2); /* Semi-transparent default */
+    border-left: 1px solid var(--cyan);
+    color: var(--cyan);
     font-weight: 900;
     font-family: var(--font-code);
-    padding: 0 30px;
+    padding: 15px 25px;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    white-space: nowrap; /* Don't wrap text */
     transition: 0.2s;
 }
 
-button:hover {
-    background: white;
-    box-shadow: 0 0 20px white;
+button:hover, button:active {
+    background: var(--cyan);
+    color: black;
+    box-shadow: 0 0 30px var(--cyan);
 }
 
 /* TERMINAL READOUT */
 .status-terminal {
     margin-top: 30px;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     text-align: left;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #555;
-    line-height: 1.5;
+    line-height: 1.6;
+    padding: 0 10px;
 }
 
 .cyan-text { color: var(--cyan); }
 .gold-text { color: var(--gold); }
 
-/* MOBILE RESPONSIVE */
+/* /// MOBILE OVERRIDE PROTOCOL /// */
 @media (max-width: 768px) {
-    .mega-glitch { font-size: 3rem; }
-    .input-lock-mechanism { width: 90%; flex-direction: column; }
-    button { padding: 20px; width: 100%; }
-    .imperial-banner { top: 10px; right: 10px; font-size: 0.6rem; }
+    .input-lock-mechanism {
+        flex-direction: column; /* Stack them vertically */
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        gap: 15px;
+    }
+
+    input {
+        background: var(--glass-surface);
+        border: 1px solid var(--cyan);
+        text-align: center;
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Includes padding in width calc */
+    }
+
+    button {
+        width: 100%; /* Full width button */
+        border: 1px solid var(--cyan); /* Full border */
+        background: var(--cyan);
+        color: black; /* High contrast for mobile */
+    }
+    
+    .status-terminal {
+        text-align: center;
+    }
 }
