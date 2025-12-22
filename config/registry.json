@@ -1,0 +1,11 @@
+{
+  "meta": { "version": "INFINITY", "currency": "USD", "status": "SOVEREIGN" },
+  "products": [
+    { "id": "PROD-004", "slug": "void-scraper", "status": "active", "title": "VOID_SCRAPER", "category": "CREATOR", "price": 69.00, "stripe_link": "https://buy.stripe.com/28E6oHctygrcdCD7zd8g00C", "tagline": "The Data Harvester.", "description": "Undetectable headless browser protocol.", "tags": ["Python", "Data"], "specs": ["Tech: Puppeteer", "Risk: Zero"] },
+    { "id": "PRO-005", "slug": "quantum-sql", "status": "active", "title": "QUANTUM_SQL", "category": "PRO", "price": 69.00, "stripe_link": "https://buy.stripe.com/fZueVdgJO6QC7efdXB8g00S", "tagline": "Database Hyper-Drive.", "description": "O(1) optimization scripts.", "tags": ["SQL", "Speed"], "specs": ["Lang: SQL", "Goal: <10ms"] },
+    { "id": "ENT-003", "slug": "founder-os", "status": "active", "title": "FOUNDER_OS", "category": "ENTREPRENEUR", "price": 79.00, "stripe_link": "https://buy.stripe.com/test_link_ent3", "tagline": "Life Architecture.", "description": "Obsidian/Notion vault.", "tags": ["System", "Notion"], "specs": ["Platform: Notion", "Method: PARA"] },
+    { "id": "PROD-005", "slug": "titan-ui-kit", "status": "active", "title": "TITAN_UI_KIT", "category": "VISUALS", "price": 49.00, "stripe_link": "https://buy.stripe.com/00w6oHdxCcaWgOP9Hl8g00D", "tagline": "Glassmorphism System.", "description": "Exact source code of the Citadel.", "tags": ["CSS", "Design"], "specs": ["Stack: CSS3", "Perf: 60FPS"] },
+    { "id": "PRO-006", "slug": "zero-trust-auth", "status": "active", "title": "ZERO_TRUST_AUTH", "category": "ENTERPRISE", "price": 69.00, "stripe_link": "https://buy.stripe.com/00w14n1OUgrceGHcTx8g00T", "tagline": "Drop-in Identity.", "description": "JWT + RBAC security.", "tags": ["Security", "Python"], "specs": ["Lang: Python", "Std: JWT"] },
+    { "id": "BIZ-001", "slug": "cashflow-sentinel", "status": "active", "title": "CASHFLOW_SENTINEL", "category": "BUSINESS", "price": 89.00, "stripe_link": "https://buy.stripe.com/test_link_biz1", "tagline": "Runway Predictor.", "description": "Algorithmic forecasting for SaaS.", "tags": ["Finance", "Excel"], "specs": ["Format: Excel", "Logic: V4"] }
+  ]
+}

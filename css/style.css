@@ -1,0 +1,16 @@
+:root { --void: #050505; --neon-cyan: #00f3ff; --neon-purple: #bc13fe; --glass-bg: rgba(20,20,20,0.6); --glass-border: rgba(255,255,255,0.08); --font-mono: 'Courier New', monospace; }
+* { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+body { background: var(--void); color: #e0e0e0; font-family: var(--font-mono); line-height: 1.6; overflow-x: hidden; }
+.phantom-nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(5,5,5,0.9); backdrop-filter: blur(16px); border-bottom: 1px solid var(--glass-border); display: flex; justify-content: center; padding: 1rem; }
+.phantom-nav a { color: #888; text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; margin: 0 1rem; text-transform: uppercase; transition: 0.3s; }
+.phantom-nav a:hover { color: var(--neon-cyan); text-shadow: 0 0 10px rgba(0,243,255,0.4); }
+.citadel-container { max-width: 1400px; margin: 0 auto; padding: 120px 2rem 4rem 2rem; position: relative; z-index: 2; }
+.glass-panel { background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: 4px; padding: 2rem; position: relative; overflow: hidden; transition: transform 0.4s; }
+.glass-panel:hover { transform: translateY(-5px); border-color: rgba(0,243,255,0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.5); }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; padding-top: 2rem; }
+.neon-text { color: var(--neon-cyan); text-shadow: 0 0 20px rgba(0,243,255,0.3); }
+.btn-acquire { display: block; width: 100%; text-align: center; border: 1px solid var(--neon-cyan); color: var(--neon-cyan); padding: 12px; text-decoration: none; font-weight: bold; transition: 0.3s; background: rgba(0,243,255,0.02); }
+.btn-acquire:hover { background: var(--neon-cyan); color: #000; box-shadow: 0 0 30px rgba(0,243,255,0.4); }
+.hunter-killer-bar { width: 100%; max-width: 600px; margin: 0 auto 3rem auto; background: rgba(0,0,0,0.6); border: 1px solid #333; color: var(--neon-cyan); padding: 1.2rem; font-family: var(--font-mono); font-size: 1.1rem; text-transform: uppercase; text-align: center; display: block; }
+#neural-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.25; pointer-events: none; }
+@media (max-width: 768px) { .phantom-nav { justify-content: flex-start; overflow-x: auto; padding: 1rem 0.5rem; } .phantom-nav a { margin: 0 10px; white-space: nowrap; } .product-grid { grid-template-columns: 1fr; } }
