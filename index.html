@@ -12,20 +12,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neural Matrix Vault | The Apex of Digital Architecture</title>
-    <meta name="description" content="Titanium-grade digital assets for creators. Zero bloat. 100% Efficiency.">
+    <meta name="description" content="Titanium-grade software assets for creators. Zero bloat. 100% Efficiency.">
 
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* LOCAL NAV STYLES */
+        .glass-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+        }
+        .nav-link {
+            color: var(--text-mute);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--neon-cyan);
+        }
+        .logo {
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            letter-spacing: -1px;
+        }
+    </style>
 </head>
 <body>
     <script src="js/defend.js"></script>
 
-    <main style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <nav class="glass-nav">
+        <a href="index.html" class="logo">NEURAL MATRIX</a>
+        <div>
+            <a href="about.html" class="nav-link">Origin</a>
+            <a href="product.html" class="nav-link">Intel</a>
+        </div>
+    </nav>
+
+    <main style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
         <div class="container">
-            <h1 style="font-size: 3rem; color: #fff;">NEURAL MATRIX <span style="color: var(--neon-cyan);">VAULT</span></h1>
-            <p style="color: var(--text-mute); margin-bottom: 2rem;">// SYSTEM ONLINE // AWAITING INPUT</p>
+            <h1 style="font-size: 3.5rem; color: #fff; line-height: 1.1;">NEURAL MATRIX <br><span style="color: var(--neon-cyan);">VAULT</span></h1>
+            <p style="color: var(--text-mute); margin: 1.5rem 0 2.5rem 0; font-size: 1.2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                // DEPLOYING TITANIUM-GRADE SOFTWARE ASSETS.<br>
+                ZERO BLOAT. INFINITE SCALE.
+            </p>
             
             <a href="product.html" class="btn-primary">Initialize Access</a>
         </div>
     </main>
+
+    <footer style="position: absolute; bottom: 20px; width: 100%; text-align: center; color: var(--text-mute); font-size: 0.8rem;">
+        <a href="legal.html" style="color: var(--text-mute); text-decoration: none; margin: 0 10px;">The Law</a>
+        <span style="opacity: 0.3;">|</span>
+        <span style="margin: 0 10px;">&copy; 2025 Neural Matrix</span>
+    </footer>
+
 </body>
 </html>
