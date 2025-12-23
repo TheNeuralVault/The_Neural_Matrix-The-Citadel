@@ -1,28 +1,23 @@
-name: Bunker Guard (Omni Audit)
+name: Bunker Guard
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
-  enforce-system-bible:
+  audit-and-build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout The Citadel
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Setup Python Logic
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
       - name: Install Dependencies
-        run: pip install stripe markdown
+        run: pip install stripe markdown Pillow
 
-      - name: Make Scripts Executable
-        run: chmod +x scripts/*.sh
-
-      - name: EXECUTE OMNI AUDIT
-        run: ./scripts/omni_audit.sh
+      - name: Execute Audit via Makefile
+        run: make audit
