@@ -1,13 +1,5 @@
 # INVENTORY_QUANT
-> EOQ calculator for supply chain.
+> EOQ calculator for supply chain optimization.
 
 ## SPECS
-- **Technology:** Python
-- **License:** Sovereign/Commercial
-- **Version:** 1.0
-
-## INSTALLATION
-1. Extract contents.
-2. Follow the specific guide in `PROTOCOL.md`.
-
-**SYSTEM SECURE.**
+['Math: EOQ', 'Stock: Lean']

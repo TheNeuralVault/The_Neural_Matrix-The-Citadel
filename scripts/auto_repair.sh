@@ -2,52 +2,54 @@
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 CYAN='\033[0;36m'
+YELLOW='\033[1;33m'
 NC='\033[0m'
 
-echo -e "\n${CYAN}❖ MAGNUS OPUS // AUTO-REPAIR PROTOCOL${NC}"
+echo -e "\n${CYAN}❖ MAGNUS OPUS // AUTO-REPAIR v2.0 (STRICT)${NC}"
 
-# 1. RUN AUDIT QUIETLY TO DETECT FAILURES
-echo ">> Scanning Citadel..."
+# 1. RUN AUDIT & CAPTURE OUTPUT
 ./scripts/omni_audit.sh > audit_log.txt 2>&1
-AUDIT_STATUS=$?
+EXIT_CODE=$?
 
-if [ $AUDIT_STATUS -eq 0 ]; then
-    echo -e "${GREEN}🏆 SYSTEM HEALTHY. NO REPAIRS NEEDED.${NC}"
+# Print the log so we see what happened
+cat audit_log.txt
+
+if [ $EXIT_CODE -eq 0 ]; then
+    echo -e "\n${GREEN}🏆 NO REPAIRS REQUIRED.${NC}"
     rm audit_log.txt
     exit 0
 fi
 
-echo -e "${RED}⚠️ DAMAGE DETECTED. INITIATING REPAIRS...${NC}"
+echo -e "\n${RED}⚠️ FAILURES DETECTED. ENGAGING REPAIR PROTOCOLS...${NC}"
 
-# 2. CHECK SPECIFIC FAILURES IN LOG
+# 2. TARGETED REPAIRS
 
-# CASE A: MISSING HTML / STRUCTURE
+# CASE A: REVENUE (The issue you have now)
+if grep -q "Placeholder Links" audit_log.txt; then
+    echo -e "${CYAN}   💰 FIXING REVENUE PIPELINE...${NC}"
+    echo -e "${YELLOW}   >> INPUT REQUIRED: The system needs your Stripe Key to generate links.${NC}"
+    python scripts/sync_stripe.py
+fi
+
+# CASE B: MISSING FILES
 if grep -q "MISSING ....." audit_log.txt; then
-    echo -e "${CYAN}   🛠 FIXING ARCHITECTURE (Regenerating Sectors & Pages)...${NC}"
+    echo -e "${CYAN}   🏗 FIXING STRUCTURE...${NC}"
     ./scripts/construct_citadel.sh
     ./scripts/regenerate_sectors.sh
 fi
 
-# CASE B: REVENUE BROKEN
-if grep -q "REVENUE ....." audit_log.txt; then
-    echo -e "${CYAN}   🛠 FIXING REVENUE (Syncing Stripe)...${NC}"
-    # Requires API Key interaction usually, so we warn user
-    echo -e "${YELLOW}   >> ACTION REQUIRED: Run 'python scripts/sync_stripe.py' manually to fix links.${NC}"
-fi
-
-# CASE C: ARMORY EMPTY (Missing Source/Zips)
+# CASE C: ARMORY (Missing Zips/Source)
 if grep -q "MISSING SOURCE" audit_log.txt || grep -q "MISSING PAYLOAD" audit_log.txt; then
-    echo -e "${CYAN}   🛠 FIXING ARMORY (Forging Assets)...${NC}"
+    echo -e "${CYAN}   ⚔️ FIXING ARMORY...${NC}"
     python scripts/forge_armory.py
 fi
 
-# CASE D: SIGNAL DRIFT (Blog/SEO)
-if grep -q "DRIFT" audit_log.txt || grep -q "DISCONNECT" audit_log.txt; then
-    echo -e "${CYAN}   🛠 FIXING SIGNAL (Compiling Blog & Sitemap)...${NC}"
+# CASE D: SIGNAL DRIFT
+if grep -q "DRIFT" audit_log.txt; then
+    echo -e "${CYAN}   📡 FIXING SIGNAL...${NC}"
     python build_blog.py
     python build_sitemap.py
 fi
 
-# 3. FINAL VERIFICATION
-echo ">> RE-SCANNING..."
+echo -e "\n${GREEN}✅ REPAIRS COMPLETE. RE-RUNNING AUDIT...${NC}"
 ./scripts/omni_audit.sh

@@ -1,13 +1,5 @@
 # OMNI_CLONE
-> Content repurposing engine (Video -> Thread -> LinkedIn).
+> Repurposing engine. Converts scripts to threads/posts.
 
 ## SPECS
-- **Technology:** Python
-- **License:** Sovereign/Commercial
-- **Version:** 1.0
-
-## INSTALLATION
-1. Extract contents.
-2. Follow the specific guide in `PROTOCOL.md`.
-
-**SYSTEM SECURE.**
+['Lang: Python', 'Input: Text']

@@ -1,100 +1,1017 @@
 {
   "meta": {
-    "version": "3.0",
-    "last_updated": "2025-12-23",
+    "version": "OMEGA",
     "currency": "USD",
-    "schema_enforcement": "strict"
+    "count": 48
   },
   "products": [
     {
-      "id": "PROD-004",
+      "id": "CRE-VOI",
       "slug": "void-scraper",
       "status": "active",
       "title": "VOID_SCRAPER",
       "category": "CREATOR",
-      "price": 69.00,
-      "stripe_link": "https://buy.stripe.com/28E6oHctygrcdCD7zd8g00C",
+      "price": 69.0,
+      "stripe_link": "https://buy.stripe.com/test_link_void-scraper",
       "download_file": "void-scraper_v1.0.zip",
-      "tagline": "The Data Harvester.",
-      "description": "Undetectable headless browser protocol. Bypasses WAFs via human-jitter entropy.",
-      "tags": ["Python", "Scraping", "Data"],
-      "manifesto": "Information is free if you have the hands to take it.",
-      "specs": ["Tech: Puppeteer/Python", "Risk: Zero-Trace", "Output: JSON/CSV"]
+      "tagline": "Undetectable headless browser protocol.",
+      "description": "Undetectable headless browser protocol. Uses Gaussian jitter to bypass WAFs.",
+      "tags": [
+        "CREATOR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Tech: Puppeteer",
+        "Risk: Zero"
+      ]
     },
     {
-      "id": "PRO-005",
+      "id": "CRE-ALG",
+      "slug": "algo-prophet",
+      "status": "active",
+      "title": "ALGO_PROPHET",
+      "category": "CREATOR",
+      "price": 49.0,
+      "stripe_link": "https://buy.stripe.com/test_link_algo-prophet",
+      "download_file": "algo-prophet_v1.0.zip",
+      "tagline": "Viral velocity predictor.",
+      "description": "Viral velocity predictor. Scores video titles against high-CTR benchmarks.",
+      "tags": [
+        "CREATOR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Algo: NLP",
+        "Target: YouTube"
+      ]
+    },
+    {
+      "id": "CRE-SIL",
+      "slug": "silence-killer",
+      "status": "active",
+      "title": "SILENCE_KILLER",
+      "category": "CREATOR",
+      "price": 39.0,
+      "stripe_link": "https://buy.stripe.com/test_link_silence-killer",
+      "download_file": "silence-killer_v1.0.zip",
+      "tagline": "FFmpeg automation that strips dead air from raw footage instantly.",
+      "description": "FFmpeg automation that strips dead air from raw footage instantly.",
+      "tags": [
+        "CREATOR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Core: FFmpeg",
+        "Speed: 100x"
+      ]
+    },
+    {
+      "id": "CRE-SPO",
+      "slug": "sponsor-leviathan",
+      "status": "active",
+      "title": "SPONSOR_LEVIATHAN",
+      "category": "CREATOR",
+      "price": 59.0,
+      "stripe_link": "https://buy.stripe.com/test_link_sponsor-leviathan",
+      "download_file": "sponsor-leviathan_v1.0.zip",
+      "tagline": "Negotiation templates using anchoring bias to 5x brand deals.",
+      "description": "Negotiation templates using anchoring bias to 5x brand deals.",
+      "tags": [
+        "CREATOR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Format: PDF",
+        "Psychology: Anchoring"
+      ]
+    },
+    {
+      "id": "CRE-RET",
+      "slug": "retention-glitch",
+      "status": "active",
+      "title": "RETENTION_GLITCH",
+      "category": "CREATOR",
+      "price": 29.0,
+      "stripe_link": "https://buy.stripe.com/test_link_retention-glitch",
+      "download_file": "retention-glitch_v1.0.zip",
+      "tagline": "4K Alpha-channel glitch overlays to reset viewer dopamine.",
+      "description": "4K Alpha-channel glitch overlays to reset viewer dopamine.",
+      "tags": [
+        "CREATOR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Res: 4K",
+        "Alpha: Yes"
+      ]
+    },
+    {
+      "id": "CRE-OMN",
+      "slug": "omni-clone",
+      "status": "active",
+      "title": "OMNI_CLONE",
+      "category": "CREATOR",
+      "price": 49.0,
+      "stripe_link": "https://buy.stripe.com/test_link_omni-clone",
+      "download_file": "omni-clone_v1.0.zip",
+      "tagline": "Repurposing engine.",
+      "description": "Repurposing engine. Converts scripts to threads/posts.",
+      "tags": [
+        "CREATOR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Lang: Python",
+        "Input: Text"
+      ]
+    },
+    {
+      "id": "CRE-CAM",
+      "slug": "cam-ready-stim",
+      "status": "active",
+      "title": "CAM_READY_STIM",
+      "category": "CREATOR",
+      "price": 19.0,
+      "stripe_link": "https://buy.stripe.com/test_link_cam-ready-stim",
+      "download_file": "cam-ready-stim_v1.0.zip",
+      "tagline": "Biological protocol for maximizing on-camera charisma.",
+      "description": "Biological protocol for maximizing on-camera charisma.",
+      "tags": [
+        "CREATOR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Type: Bio-Stack",
+        "Focus: Energy"
+      ]
+    },
+    {
+      "id": "CRE-ACO",
+      "slug": "acolyte-blueprint",
+      "status": "active",
+      "title": "ACOLYTE_BLUEPRINT",
+      "category": "CREATOR",
+      "price": 99.0,
+      "stripe_link": "https://buy.stripe.com/test_link_acolyte-blueprint",
+      "download_file": "acolyte-blueprint_v1.0.zip",
+      "tagline": "Architecture for converting viewers into a cult following.",
+      "description": "Architecture for converting viewers into a cult following.",
+      "tags": [
+        "CREATOR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Strategy: Funnels",
+        "Goal: LTV"
+      ]
+    },
+    {
+      "id": "PRO-QUA",
       "slug": "quantum-sql",
       "status": "active",
       "title": "QUANTUM_SQL",
       "category": "PRO",
-      "price": 69.00,
-      "stripe_link": "https://buy.stripe.com/fZueVdgJO6QC7efdXB8g00S",
+      "price": 69.0,
+      "stripe_link": "https://buy.stripe.com/test_link_quantum-sql",
       "download_file": "quantum-sql_v1.0.zip",
-      "tagline": "Database Hyper-Drive.",
-      "description": "O(1) optimization scripts to reduce query time from 200ms to 4ms on million-row datasets.",
-      "tags": ["SQL", "Database", "Performance"],
-      "manifesto": "Queries faster than thought.",
-      "specs": ["Lang: SQL", "Target: Postgres/MySQL", "Goal: <10ms Queries"]
+      "tagline": "Database optimization suite.",
+      "description": "Database optimization suite. Reduces query time from 200ms to 4ms.",
+      "tags": [
+        "PRO",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "SQL: ANSI",
+        "Method: Indexing"
+      ]
     },
     {
-      "id": "ENT-003",
-      "slug": "founder-os",
+      "id": "PRO-ORB",
+      "slug": "orbital-ci",
       "status": "active",
-      "title": "FOUNDER_OS",
-      "category": "ENTREPRENEUR",
-      "price": 79.00,
-      "stripe_link": "https://buy.stripe.com/test_link_ent3",
-      "download_file": "founder-os_v1.0.zip",
-      "tagline": "Life Architecture.",
-      "description": "Obsidian/Notion vault for managing cognitive load and strategic execution.",
-      "tags": ["System", "Notion", "Productivity"],
-      "manifesto": "Order from chaos.",
-      "specs": ["Platform: Obsidian/Notion", "Method: PARA"]
+      "title": "ORBITAL_CI",
+      "category": "PRO",
+      "price": 79.0,
+      "stripe_link": "https://buy.stripe.com/test_link_orbital-ci",
+      "download_file": "orbital-ci_v1.0.zip",
+      "tagline": "Zero-downtime deployment pipeline for GitHub Actions.",
+      "description": "Zero-downtime deployment pipeline for GitHub Actions.",
+      "tags": [
+        "PRO",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "CI/CD: Actions",
+        "Uptime: 99.9%"
+      ]
     },
     {
-      "id": "PROD-005",
-      "slug": "titan-ui-kit",
+      "id": "PRO-HYP",
+      "slug": "hyper-gate",
       "status": "active",
-      "title": "TITAN_UI_KIT",
-      "category": "VISUALS",
-      "price": 49.00,
-      "stripe_link": "https://buy.stripe.com/00w6oHdxCcaWgOP9Hl8g00D",
-      "download_file": "titan-ui-kit_v1.0.zip",
-      "tagline": "Glassmorphism System.",
-      "description": "The exact CSS/HTML source code used to build the Neural Matrix Citadel.",
-      "tags": ["CSS", "Design", "Frontend"],
-      "manifesto": "Design is how you command respect.",
-      "specs": ["Stack: CSS3", "Perf: 60FPS", "License: Commercial"]
+      "title": "HYPER_GATE",
+      "category": "PRO",
+      "price": 59.0,
+      "stripe_link": "https://buy.stripe.com/test_link_hyper-gate",
+      "download_file": "hyper-gate_v1.0.zip",
+      "tagline": "Nginx configuration tuned for C10K concurrency.",
+      "description": "Nginx configuration tuned for C10K concurrency.",
+      "tags": [
+        "PRO",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Server: Nginx",
+        "Tuning: Kernel"
+      ]
     },
     {
-      "id": "PRO-006",
+      "id": "PRO-DOC",
+      "slug": "docker-titan",
+      "status": "active",
+      "title": "DOCKER_TITAN",
+      "category": "PRO",
+      "price": 49.0,
+      "stripe_link": "https://buy.stripe.com/test_link_docker-titan",
+      "download_file": "docker-titan_v1.0.zip",
+      "tagline": "Hardened Docker Compose templates for production.",
+      "description": "Hardened Docker Compose templates for production.",
+      "tags": [
+        "PRO",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Container: Docker",
+        "Security: Rootless"
+      ]
+    },
+    {
+      "id": "PRO-ZER",
       "slug": "zero-trust-auth",
       "status": "active",
       "title": "ZERO_TRUST_AUTH",
       "category": "PRO",
-      "price": 69.00,
-      "stripe_link": "https://buy.stripe.com/00w14n1OUgrceGHcTx8g00T",
+      "price": 69.0,
+      "stripe_link": "https://buy.stripe.com/test_link_zero-trust-auth",
       "download_file": "zero-trust-auth_v1.0.zip",
-      "tagline": "Drop-in Identity.",
-      "description": "Secure authentication module implementing JWT with Role-Based Access Control.",
-      "tags": ["Security", "Python", "Auth"],
-      "manifesto": "Trust nothing. Verify everything.",
-      "specs": ["Lang: Python", "Standard: JWT (HS256)", "Security: RBAC"]
+      "tagline": "JWT + RBAC authentication module for Python backends.",
+      "description": "JWT + RBAC authentication module for Python backends.",
+      "tags": [
+        "PRO",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Crypto: HS256",
+        "Logic: Middleware"
+      ]
     },
     {
-      "id": "BIZ-001",
+      "id": "PRO-SYN",
+      "slug": "synapse-monitor",
+      "status": "active",
+      "title": "SYNAPSE_MONITOR",
+      "category": "PRO",
+      "price": 59.0,
+      "stripe_link": "https://buy.stripe.com/test_link_synapse-monitor",
+      "download_file": "synapse-monitor_v1.0.zip",
+      "tagline": "Real-time server health dashboard via WebSockets.",
+      "description": "Real-time server health dashboard via WebSockets.",
+      "tags": [
+        "PRO",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Protocol: WS",
+        "UI: Canvas"
+      ]
+    },
+    {
+      "id": "PRO-AET",
+      "slug": "aether-grid",
+      "status": "active",
+      "title": "AETHER_GRID",
+      "category": "PRO",
+      "price": 89.0,
+      "stripe_link": "https://buy.stripe.com/test_link_aether-grid",
+      "download_file": "aether-grid_v1.0.zip",
+      "tagline": "Self-healing process watchdog.",
+      "description": "Self-healing process watchdog. Restarts crashed services.",
+      "tags": [
+        "PRO",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Daemon: Systemd",
+        "Lang: Python"
+      ]
+    },
+    {
+      "id": "PRO-CHR",
+      "slug": "chronos-core",
+      "status": "active",
+      "title": "CHRONOS_CORE",
+      "category": "PRO",
+      "price": 149.0,
+      "stripe_link": "https://buy.stripe.com/test_link_chronos-core",
+      "download_file": "chronos-core_v1.0.zip",
+      "tagline": "O(1) anomaly detection algorithm for high-frequency data.",
+      "description": "O(1) anomaly detection algorithm for high-frequency data.",
+      "tags": [
+        "PRO",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Math: Statistical",
+        "Speed: Realtime"
+      ]
+    },
+    {
+      "id": "VIS-TIT",
+      "slug": "titan-ui-kit",
+      "status": "active",
+      "title": "TITAN_UI_KIT",
+      "category": "VISUALS",
+      "price": 49.0,
+      "stripe_link": "https://buy.stripe.com/test_link_titan-ui-kit",
+      "download_file": "titan-ui-kit_v1.0.zip",
+      "tagline": "The exact CSS/HTML source code of the Neural Matrix.",
+      "description": "The exact CSS/HTML source code of the Neural Matrix.",
+      "tags": [
+        "VISUALS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "CSS: Vanilla",
+        "Theme: Dark"
+      ]
+    },
+    {
+      "id": "VIS-AST",
+      "slug": "astral-shaders",
+      "status": "active",
+      "title": "ASTRAL_SHADERS",
+      "category": "VISUALS",
+      "price": 39.0,
+      "stripe_link": "https://buy.stripe.com/test_link_astral-shaders",
+      "download_file": "astral-shaders_v1.0.zip",
+      "tagline": "WebGL liquid metal backgrounds.",
+      "description": "WebGL liquid metal backgrounds.",
+      "tags": [
+        "VISUALS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "GLSL: Fragment",
+        "Perf: GPU"
+      ]
+    },
+    {
+      "id": "VIS-OBS",
+      "slug": "obsidian-icons",
+      "status": "active",
+      "title": "OBSIDIAN_ICONS",
+      "category": "VISUALS",
+      "price": 29.0,
+      "stripe_link": "https://buy.stripe.com/test_link_obsidian-icons",
+      "download_file": "obsidian-icons_v1.0.zip",
+      "tagline": "Geometric SVG icons optimized for dark interfaces.",
+      "description": "Geometric SVG icons optimized for dark interfaces.",
+      "tags": [
+        "VISUALS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Format: SVG",
+        "Style: Sharp"
+      ]
+    },
+    {
+      "id": "VIS-MAT",
+      "slug": "matrix-core-fx",
+      "status": "active",
+      "title": "MATRIX_CORE_FX",
+      "category": "VISUALS",
+      "price": 59.0,
+      "stripe_link": "https://buy.stripe.com/test_link_matrix-core-fx",
+      "download_file": "matrix-core-fx_v1.0.zip",
+      "tagline": "Canvas algorithms for Matrix rain and particles.",
+      "description": "Canvas algorithms for Matrix rain and particles.",
+      "tags": [
+        "VISUALS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "JS: Canvas",
+        "FPS: 60"
+      ]
+    },
+    {
+      "id": "VIS-NEO",
+      "slug": "neon-kinetics",
+      "status": "active",
+      "title": "NEON_KINETICS",
+      "category": "VISUALS",
+      "price": 39.0,
+      "stripe_link": "https://buy.stripe.com/test_link_neon-kinetics",
+      "download_file": "neon-kinetics_v1.0.zip",
+      "tagline": "CSS library for glowing, kinetic typography.",
+      "description": "CSS library for glowing, kinetic typography.",
+      "tags": [
+        "VISUALS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Effect: Glow",
+        "Anim: Keyframes"
+      ]
+    },
+    {
+      "id": "VIS-CYB",
+      "slug": "cyber-hud-pack",
+      "status": "active",
+      "title": "CYBER_HUD_PACK",
+      "category": "VISUALS",
+      "price": 49.0,
+      "stripe_link": "https://buy.stripe.com/test_link_cyber-hud-pack",
+      "download_file": "cyber-hud-pack_v1.0.zip",
+      "tagline": "Video overlays of futuristic targeting systems.",
+      "description": "Video overlays of futuristic targeting systems.",
+      "tags": [
+        "VISUALS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Video: MOV",
+        "Alpha: Yes"
+      ]
+    },
+    {
+      "id": "VIS-VOI",
+      "slug": "void-textures",
+      "status": "active",
+      "title": "VOID_TEXTURES",
+      "category": "VISUALS",
+      "price": 29.0,
+      "stripe_link": "https://buy.stripe.com/test_link_void-textures",
+      "download_file": "void-textures_v1.0.zip",
+      "tagline": "High-res noise textures for UI depth.",
+      "description": "High-res noise textures for UI depth.",
+      "tags": [
+        "VISUALS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Res: 5K",
+        "Type: Noise"
+      ]
+    },
+    {
+      "id": "VIS-NEU",
+      "slug": "neuro-prime",
+      "status": "active",
+      "title": "NEURO_PRIME",
+      "category": "VISUALS",
+      "price": 29.0,
+      "stripe_link": "https://buy.stripe.com/test_link_neuro-prime",
+      "download_file": "neuro-prime_v1.0.zip",
+      "tagline": "Focus-enhancing wallpaper and audio stems.",
+      "description": "Focus-enhancing wallpaper and audio stems.",
+      "tags": [
+        "VISUALS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Audio: Binaural",
+        "Visual: Dark"
+      ]
+    },
+    {
+      "id": "ENT-FOU",
+      "slug": "founder-os",
+      "status": "active",
+      "title": "FOUNDER_OS",
+      "category": "ENTREPRENEUR",
+      "price": 79.0,
+      "stripe_link": "https://buy.stripe.com/test_link_founder-os",
+      "download_file": "founder-os_v1.0.zip",
+      "tagline": "Notion/Obsidian vault for managing strategy.",
+      "description": "Notion/Obsidian vault for managing strategy.",
+      "tags": [
+        "ENTREPRENEUR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "App: Notion",
+        "Logic: PARA"
+      ]
+    },
+    {
+      "id": "ENT-PIT",
+      "slug": "pitch-black-deck",
+      "status": "active",
+      "title": "PITCH_BLACK_DECK",
+      "category": "ENTREPRENEUR",
+      "price": 99.0,
+      "stripe_link": "https://buy.stripe.com/test_link_pitch-black-deck",
+      "download_file": "pitch-black-deck_v1.0.zip",
+      "tagline": "10-slide fundraising framework based on loss aversion.",
+      "description": "10-slide fundraising framework based on loss aversion.",
+      "tags": [
+        "ENTREPRENEUR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Format: Keynote",
+        "Focus: VC"
+      ]
+    },
+    {
+      "id": "ENT-VAL",
+      "slug": "valuation-oracle",
+      "status": "active",
+      "title": "VALUATION_ORACLE",
+      "category": "ENTREPRENEUR",
+      "price": 129.0,
+      "stripe_link": "https://buy.stripe.com/test_link_valuation-oracle",
+      "download_file": "valuation-oracle_v1.0.zip",
+      "tagline": "SaaS valuation calculator script.",
+      "description": "SaaS valuation calculator script.",
+      "tags": [
+        "ENTREPRENEUR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Input: MRR/Churn",
+        "Output: $$$"
+      ]
+    },
+    {
+      "id": "ENT-EQU",
+      "slug": "equity-split-ai",
+      "status": "active",
+      "title": "EQUITY_SPLIT_AI",
+      "category": "ENTREPRENEUR",
+      "price": 59.0,
+      "stripe_link": "https://buy.stripe.com/test_link_equity-split-ai",
+      "download_file": "equity-split-ai_v1.0.zip",
+      "tagline": "Dynamic co-founder equity calculator.",
+      "description": "Dynamic co-founder equity calculator.",
+      "tags": [
+        "ENTREPRENEUR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Model: Slicing Pie",
+        "Fairness: 100%"
+      ]
+    },
+    {
+      "id": "ENT-COM",
+      "slug": "competitor-recon",
+      "status": "active",
+      "title": "COMPETITOR_RECON",
+      "category": "ENTREPRENEUR",
+      "price": 89.0,
+      "stripe_link": "https://buy.stripe.com/test_link_competitor-recon",
+      "download_file": "competitor-recon_v1.0.zip",
+      "tagline": "Bot that monitors competitor pricing changes.",
+      "description": "Bot that monitors competitor pricing changes.",
+      "tags": [
+        "ENTREPRENEUR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Target: HTML",
+        "Alert: Email"
+      ]
+    },
+    {
+      "id": "ENT-TER",
+      "slug": "term-sheet-decoder",
+      "status": "active",
+      "title": "TERM_SHEET_DECODER",
+      "category": "ENTREPRENEUR",
+      "price": 149.0,
+      "stripe_link": "https://buy.stripe.com/test_link_term-sheet-decoder",
+      "download_file": "term-sheet-decoder_v1.0.zip",
+      "tagline": "NLP scanner for predatory contract clauses.",
+      "description": "NLP scanner for predatory contract clauses.",
+      "tags": [
+        "ENTREPRENEUR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Scan: PDF",
+        "Highlight: Risk"
+      ]
+    },
+    {
+      "id": "ENT-MVP",
+      "slug": "mvp-speedrun",
+      "status": "active",
+      "title": "MVP_SPEEDRUN",
+      "category": "ENTREPRENEUR",
+      "price": 199.0,
+      "stripe_link": "https://buy.stripe.com/test_link_mvp-speedrun",
+      "download_file": "mvp-speedrun_v1.0.zip",
+      "tagline": "Full-stack boilerplate stripped of bloat.",
+      "description": "Full-stack boilerplate stripped of bloat.",
+      "tags": [
+        "ENTREPRENEUR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Stack: MERN",
+        "Auth: Ready"
+      ]
+    },
+    {
+      "id": "ENT-ECH",
+      "slug": "echo-marketer",
+      "status": "active",
+      "title": "ECHO_MARKETER",
+      "category": "ENTREPRENEUR",
+      "price": 79.0,
+      "stripe_link": "https://buy.stripe.com/test_link_echo-marketer",
+      "download_file": "echo-marketer_v1.0.zip",
+      "tagline": "Viral distribution bot for social platforms.",
+      "description": "Viral distribution bot for social platforms.",
+      "tags": [
+        "ENTREPRENEUR",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "API: Discord/X",
+        "Auto: Cron"
+      ]
+    },
+    {
+      "id": "BUS-CAS",
       "slug": "cashflow-sentinel",
       "status": "active",
       "title": "CASHFLOW_SENTINEL",
       "category": "BUSINESS",
-      "price": 89.00,
-      "stripe_link": "https://buy.stripe.com/test_link_biz1",
+      "price": 89.0,
+      "stripe_link": "https://buy.stripe.com/test_link_cashflow-sentinel",
       "download_file": "cashflow-sentinel_v1.0.zip",
-      "tagline": "Runway Predictor.",
-      "description": "Algorithmic forecasting for SaaS.",
-      "tags": ["Finance", "Excel"],
-      "manifesto": "Cash is oxygen.",
-      "specs": ["Format: Excel", "Logic: V4"]
+      "tagline": "Runway predictor algorithms.",
+      "description": "Runway predictor algorithms.",
+      "tags": [
+        "BUSINESS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Data: CSV",
+        "Output: Date"
+      ]
+    },
+    {
+      "id": "BUS-OPS",
+      "slug": "ops-core-os",
+      "status": "active",
+      "title": "OPS_CORE_OS",
+      "category": "BUSINESS",
+      "price": 199.0,
+      "stripe_link": "https://buy.stripe.com/test_link_ops-core-os",
+      "download_file": "ops-core-os_v1.0.zip",
+      "tagline": "Automation templates to replace admin staff.",
+      "description": "Automation templates to replace admin staff.",
+      "tags": [
+        "BUSINESS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Platform: Zapier",
+        "Save: Time"
+      ]
+    },
+    {
+      "id": "BUS-AUT",
+      "slug": "autonomous-hr",
+      "status": "active",
+      "title": "AUTONOMOUS_HR",
+      "category": "BUSINESS",
+      "price": 129.0,
+      "stripe_link": "https://buy.stripe.com/test_link_autonomous-hr",
+      "download_file": "autonomous-hr_v1.0.zip",
+      "tagline": "Resume parser and candidate scorer.",
+      "description": "Resume parser and candidate scorer.",
+      "tags": [
+        "BUSINESS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "NLP: NLTK",
+        "Rank: Auto"
+      ]
+    },
+    {
+      "id": "BUS-LEA",
+      "slug": "lead-scoring-matrix",
+      "status": "active",
+      "title": "LEAD_SCORING_MATRIX",
+      "category": "BUSINESS",
+      "price": 99.0,
+      "stripe_link": "https://buy.stripe.com/test_link_lead-scoring-matrix",
+      "download_file": "lead-scoring-matrix_v1.0.zip",
+      "tagline": "Algorithm to rank sales leads.",
+      "description": "Algorithm to rank sales leads.",
+      "tags": [
+        "BUSINESS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Input: CRM",
+        "Score: 0-100"
+      ]
+    },
+    {
+      "id": "BUS-INV",
+      "slug": "inventory-quant",
+      "status": "active",
+      "title": "INVENTORY_QUANT",
+      "category": "BUSINESS",
+      "price": 119.0,
+      "stripe_link": "https://buy.stripe.com/test_link_inventory-quant",
+      "download_file": "inventory-quant_v1.0.zip",
+      "tagline": "EOQ calculator for supply chain optimization.",
+      "description": "EOQ calculator for supply chain optimization.",
+      "tags": [
+        "BUSINESS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Math: EOQ",
+        "Stock: Lean"
+      ]
+    },
+    {
+      "id": "BUS-REV",
+      "slug": "review-aggregator",
+      "status": "active",
+      "title": "REVIEW_AGGREGATOR",
+      "category": "BUSINESS",
+      "price": 79.0,
+      "stripe_link": "https://buy.stripe.com/test_link_review-aggregator",
+      "download_file": "review-aggregator_v1.0.zip",
+      "tagline": "Scrapes and analyzes sentiment of reviews.",
+      "description": "Scrapes and analyzes sentiment of reviews.",
+      "tags": [
+        "BUSINESS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Source: G-Maps",
+        "Sentiment: AI"
+      ]
+    },
+    {
+      "id": "BUS-CON",
+      "slug": "contract-generator",
+      "status": "active",
+      "title": "CONTRACT_GENERATOR",
+      "category": "BUSINESS",
+      "price": 89.0,
+      "stripe_link": "https://buy.stripe.com/test_link_contract-generator",
+      "download_file": "contract-generator_v1.0.zip",
+      "tagline": "Auto-generates NDAs and MSAs.",
+      "description": "Auto-generates NDAs and MSAs.",
+      "tags": [
+        "BUSINESS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Output: PDF",
+        "Legal: Valid"
+      ]
+    },
+    {
+      "id": "BUS-PRO",
+      "slug": "profit-first-dash",
+      "status": "active",
+      "title": "PROFIT_FIRST_DASH",
+      "category": "BUSINESS",
+      "price": 69.0,
+      "stripe_link": "https://buy.stripe.com/test_link_profit-first-dash",
+      "download_file": "profit-first-dash_v1.0.zip",
+      "tagline": "Real-time P&L visualization.",
+      "description": "Real-time P&L visualization.",
+      "tags": [
+        "BUSINESS",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Data: Stripe",
+        "View: Chart"
+      ]
+    },
+    {
+      "id": "ENT-THE",
+      "slug": "the-sovereign-node",
+      "status": "active",
+      "title": "THE_SOVEREIGN_NODE",
+      "category": "ENTERPRISE",
+      "price": 499.0,
+      "stripe_link": "https://buy.stripe.com/test_link_the-sovereign-node",
+      "download_file": "the-sovereign-node_v1.0.zip",
+      "tagline": "Hardware independence protocol.",
+      "description": "Hardware independence protocol.",
+      "tags": [
+        "ENTERPRISE",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "OS: Linux",
+        "Hardware: ARM"
+      ]
+    },
+    {
+      "id": "ENT-DAT",
+      "slug": "data-lake-architect",
+      "status": "active",
+      "title": "DATA_LAKE_ARCHITECT",
+      "category": "ENTERPRISE",
+      "price": 599.0,
+      "stripe_link": "https://buy.stripe.com/test_link_data-lake-architect",
+      "download_file": "data-lake-architect_v1.0.zip",
+      "tagline": "Private S3 infrastructure via MinIO.",
+      "description": "Private S3 infrastructure via MinIO.",
+      "tags": [
+        "ENTERPRISE",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Storage: Object",
+        "Privacy: 100%"
+      ]
+    },
+    {
+      "id": "ENT-INT",
+      "slug": "internal-neural-net",
+      "status": "active",
+      "title": "INTERNAL_NEURAL_NET",
+      "category": "ENTERPRISE",
+      "price": 899.0,
+      "stripe_link": "https://buy.stripe.com/test_link_internal-neural-net",
+      "download_file": "internal-neural-net_v1.0.zip",
+      "tagline": "Local RAG AI for corporate knowledge.",
+      "description": "Local RAG AI for corporate knowledge.",
+      "tags": [
+        "ENTERPRISE",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Model: Llama",
+        "Local: Yes"
+      ]
+    },
+    {
+      "id": "ENT-ZER",
+      "slug": "zero-leak-protocol",
+      "status": "active",
+      "title": "ZERO_LEAK_PROTOCOL",
+      "category": "ENTERPRISE",
+      "price": 399.0,
+      "stripe_link": "https://buy.stripe.com/test_link_zero-leak-protocol",
+      "download_file": "zero-leak-protocol_v1.0.zip",
+      "tagline": "DLP scanner for git repositories.",
+      "description": "DLP scanner for git repositories.",
+      "tags": [
+        "ENTERPRISE",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Scan: Regex",
+        "Target: Git"
+      ]
+    },
+    {
+      "id": "ENT-AUD",
+      "slug": "audit-trail-immutable",
+      "status": "active",
+      "title": "AUDIT_TRAIL_IMMUTABLE",
+      "category": "ENTERPRISE",
+      "price": 499.0,
+      "stripe_link": "https://buy.stripe.com/test_link_audit-trail-immutable",
+      "download_file": "audit-trail-immutable_v1.0.zip",
+      "tagline": "Blockchain-lite log integrity system.",
+      "description": "Blockchain-lite log integrity system.",
+      "tags": [
+        "ENTERPRISE",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Hash: SHA256",
+        "Chain: Yes"
+      ]
+    },
+    {
+      "id": "ENT-GLO",
+      "slug": "global-load-balancer",
+      "status": "active",
+      "title": "GLOBAL_LOAD_BALANCER",
+      "category": "ENTERPRISE",
+      "price": 299.0,
+      "stripe_link": "https://buy.stripe.com/test_link_global-load-balancer",
+      "download_file": "global-load-balancer_v1.0.zip",
+      "tagline": "Geo-spatial traffic routing config.",
+      "description": "Geo-spatial traffic routing config.",
+      "tags": [
+        "ENTERPRISE",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "GeoIP: MaxMind",
+        "Route: Latency"
+      ]
+    },
+    {
+      "id": "ENT-RED",
+      "slug": "red-team-toolkit",
+      "status": "active",
+      "title": "RED_TEAM_TOOLKIT",
+      "category": "ENTERPRISE",
+      "price": 699.0,
+      "stripe_link": "https://buy.stripe.com/test_link_red-team-toolkit",
+      "download_file": "red-team-toolkit_v1.0.zip",
+      "tagline": "Automated penetration testing suite.",
+      "description": "Automated penetration testing suite.",
+      "tags": [
+        "ENTERPRISE",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Tool: Nmap",
+        "Report: Auto"
+      ]
+    },
+    {
+      "id": "ENT-COM",
+      "slug": "compliance-engine",
+      "status": "active",
+      "title": "COMPLIANCE_ENGINE",
+      "category": "ENTERPRISE",
+      "price": 349.0,
+      "stripe_link": "https://buy.stripe.com/test_link_compliance-engine",
+      "download_file": "compliance-engine_v1.0.zip",
+      "tagline": "Automated SOC2 evidence gathering.",
+      "description": "Automated SOC2 evidence gathering.",
+      "tags": [
+        "ENTERPRISE",
+        "Sovereign"
+      ],
+      "manifesto": "The System is the Solution.",
+      "specs": [
+        "Standard: SOC2",
+        "Audit: Ready"
+      ]
     }
   ]
 }

@@ -1,13 +1,5 @@
 # REVIEW_AGGREGATOR
-> Scrapes and sentiments analyzes reviews.
+> Scrapes and analyzes sentiment of reviews.
 
 ## SPECS
-- **Technology:** Python
-- **License:** Sovereign/Commercial
-- **Version:** 1.0
-
-## INSTALLATION
-1. Extract contents.
-2. Follow the specific guide in `PROTOCOL.md`.
-
-**SYSTEM SECURE.**
+['Source: G-Maps', 'Sentiment: AI']

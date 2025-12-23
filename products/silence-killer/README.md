@@ -1,13 +1,5 @@
 # SILENCE_KILLER
-> FFmpeg script that auto-cuts silence from raw footage.
+> FFmpeg automation that strips dead air from raw footage instantly.
 
 ## SPECS
-- **Technology:** FFmpeg
-- **License:** Sovereign/Commercial
-- **Version:** 1.0
-
-## INSTALLATION
-1. Extract contents.
-2. Follow the specific guide in `PROTOCOL.md`.
-
-**SYSTEM SECURE.**
+['Core: FFmpeg', 'Speed: 100x']
