@@ -4,13 +4,23 @@
   "products": [
     {
       "id": "PROD-001",
-      "name": "The CPO Prompt Playbook",
-      "price": 29.99,
-      "description": "10 Executive Persona Templates for Instant AI Delegation.",
-      "image": "assets/images/cpo_playbook_cover.jpg",
-      "tags": ["AI", "Management", "Prompts"],
+      "name": "The Sentinel: SEO Automator",
+      "price": 99.00,
+      "description": "Autonomous Python engine for sitemap generation, meta-tag injection, and schema validation. Zero dependencies. Pure speed.",
+      "image": "assets/images/sentinel_core.jpg",
+      "tags": ["Software", "Python", "Automation", "SEO"],
       "stripe_link": "https://buy.stripe.com/your-link-here",
-      "download_file": "cpo_playbook_v1.zip"
+      "download_file": "sentinel_v1.zip"
+    },
+    {
+      "id": "PROD-002",
+      "name": "Neural Matrix: Glass UI Kit",
+      "price": 49.00,
+      "description": "The complete HTML5/CSS3 framework used to build this Citadel. Drop-in ready for high-end digital architecture.",
+      "image": "assets/images/glass_ui.jpg",
+      "tags": ["Code", "CSS", "Frontend"],
+      "stripe_link": "https://buy.stripe.com/your-link-here",
+      "download_file": "glass_ui_kit.zip"
     }
   ]
 }
