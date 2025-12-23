@@ -9,7 +9,7 @@
       "description": "Autonomous Python engine for sitemap generation, meta-tag injection, and schema validation. Zero dependencies. Pure speed.",
       "image": "assets/images/sentinel_core.jpg",
       "tags": ["Software", "Python", "Automation", "SEO"],
-      "stripe_link": "https://buy.stripe.com/your-link-here",
+      "stripe_link": "#",
       "download_file": "sentinel_v1.zip"
     },
     {
@@ -19,7 +19,7 @@
       "description": "The complete HTML5/CSS3 framework used to build this Citadel. Drop-in ready for high-end digital architecture.",
       "image": "assets/images/glass_ui.jpg",
       "tags": ["Code", "CSS", "Frontend"],
-      "stripe_link": "https://buy.stripe.com/your-link-here",
+      "stripe_link": "#",
       "download_file": "glass_ui_kit.zip"
     }
   ]
