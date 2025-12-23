@@ -1,13 +1,4 @@
-# VOID_SCRAPER
-> Undetectable headless browser protocol.
-
-## SPECS
-- **Technology:** Python
-- **License:** Sovereign/Commercial
-- **Version:** 1.0
-
-## INSTALLATION
-1. Extract contents.
-2. Follow the specific guide in `PROTOCOL.md`.
-
-**SYSTEM SECURE.**
+# VOID SCRAPER // v1.0
+## USAGE
+1. Install requirements: `pip install requests fake-useragent`
+2. Run: `python src/harvester.py`
