@@ -4,7 +4,7 @@ echo "❖ FORGING CITADEL..."
 cat <<'HTML' > _template_master.html
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>[[TITLE]] // Neural Matrix</title><link rel="stylesheet" href="css/style.css"><script async src="https://www.googletagmanager.com/gtag/js?id=G-P1PCVNCCE4"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P1PCVNCCE4');</script></head>
 <body data-category="[[CATEGORY]]"><canvas id="neural-canvas"></canvas>
-<nav class="phantom-nav"><a href="/index.html">[ HOME ]</a><a href="/about.html">[ ABOUT ]</a><a href="/blog/index.html">[ SIGNAL ]</a><a href="/product.html">[ ARMORY ]</a><a href="/legal.html">[ LEGAL ]</a></nav>
+<nav class="phantom-nav"><a href="/">[ HOME ]</a><a href="/about.html">[ ABOUT ]</a><a href="/blog/index.html">[ SIGNAL ]</a><a href="/product.html">[ ARMORY ]</a><a href="/legal.html">[ LEGAL ]</a></nav>
 <main class="citadel-container"><header style="text-align:center;margin-bottom:4rem;"><h1 class="neon-text">[[HEADER]]</h1><p style="color:#888;">[[SUBTEXT]]</p></header>[[CONTENT]]</main>
 <footer style="text-align:center;padding:4rem 0;color:#333;font-size:0.8rem;">NEURAL MATRIX VAULT // SYSTEM SECURE</footer><script src="js/main.js"></script></body></html>
 HTML
