@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1PCVNCCE4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-P1PCVNCCE4');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquisition Complete | Neural Matrix Vault</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <script src="js/defend.js"></script>
+
+    <main style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+        <div class="container glass-panel" style="max-width: 600px;">
+            <h1 style="color: var(--neon-green);">// ACCESS GRANTED</h1>
+            <p style="margin-bottom: 2rem;">Transfer complete. Initializing download protocol.</p>
+            <div id="download-zone">
+                <p>Verifying Artifact ID...</p>
+            </div>
+            <a href="index.html" style="color: var(--text-mute); margin-top: 2rem; display: block;">Return to Citadel</a>
+        </div>
+    </main>
+
+    <script>
+        /* INLINE DELIVERY LOGIC */
+        async function deliverAsset() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('prod');
+            const zone = document.getElementById('download-zone');
+
+            if (!productId) {
+                zone.innerHTML = '<p style="color: red;">// ERROR: NO ARTIFACT SPECIFIED.</p>';
+                return;
+            }
+
+            try {
+                const response = await fetch('config/registry.json');
+                const data = await response.json();
+                const product = data.products.find(p => p.id === productId);
+
+                if (product && product.download_file) {
+                    zone.innerHTML = `
+                        <p style="margin-bottom: 1rem;">Asset: <strong>${product.name}</strong></p>
+                        <a href="public/downloads/${product.download_file}" class="btn-primary" download>DOWNLOAD SECURE ARCHIVE</a>
+                    `;
+                } else {
+                    zone.innerHTML = '<p style="color: red;">// ERROR: INVALID ARTIFACT ID.</p>';
+                }
+            } catch (e) {
+                zone.innerHTML = '<p style="color: red;">// SYSTEM ERROR.</p>';
+            }
+        }
+        deliverAsset();
+    </script>
+</body>
+</html>

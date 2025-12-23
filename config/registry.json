@@ -1,0 +1,16 @@
+{
+  "system_status": "active",
+  "currency": "USD",
+  "products": [
+    {
+      "id": "PROD-001",
+      "name": "The CPO Prompt Playbook",
+      "price": 29.99,
+      "description": "10 Executive Persona Templates for Instant AI Delegation.",
+      "image": "assets/images/cpo_playbook_cover.jpg",
+      "tags": ["AI", "Management", "Prompts"],
+      "stripe_link": "https://buy.stripe.com/your-link-here",
+      "download_file": "cpo_playbook_v1.zip"
+    }
+  ]
+}
