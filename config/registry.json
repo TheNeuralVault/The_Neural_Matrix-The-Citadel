@@ -5,21 +5,29 @@
     {
       "id": "ARTIFACT-001",
       "name": "The Sentinel Protocol",
-      "price": 99.00,
+      "price": 99.0,
       "description": "A sovereign, Python-based SEO automation engine designed for total search dominance. FEATURES: Autonomous sitemap generation, meta-tag injection, schema validation, and broken link detection. Executes in milliseconds. Zero dependencies. Pure speed. Deploys instantly to any static architecture.",
       "image": "assets/images/sentinel_core.jpg",
-      "tags": ["Protocol", "Python", "Class-S"],
-      "stripe_link": null,
+      "tags": [
+        "Protocol",
+        "Python",
+        "Class-S"
+      ],
+      "stripe_link": "https://buy.stripe.com/dRm28rbpu7UG7ef4n18g02z",
       "download_file": "sentinel_v1.zip"
     },
     {
       "id": "ARTIFACT-002",
       "name": "Glass UI: Titan Edition",
-      "price": 49.00,
+      "price": 49.0,
       "description": "The complete visual source code of the Neural Matrix Citadel. A titanium-grade HTML5/CSS3 framework featuring: Real-time Matrix Rain canvas, WebGL 3D artifact rendering, 8-tier CSS variable system, and responsive Bento Grid layout. Drop-in ready for high-end digital architecture.",
       "image": "assets/images/glass_ui.jpg",
-      "tags": ["Artifact", "Frontend", "Class-A"],
-      "stripe_link": null,
+      "tags": [
+        "Artifact",
+        "Frontend",
+        "Class-A"
+      ],
+      "stripe_link": "https://buy.stripe.com/00w00j9hm1wicyz1aP8g02A",
       "download_file": "glass_ui_kit.zip"
     }
   ]
