@@ -1,3 +1,14 @@
+#!/bin/bash
+
+# TEMPLATE FUNCTION
+create_page() {
+    FILENAME=$1
+    TITLE=$2
+    SUBTITLE=$3
+    DESC=$4
+    TAG=$5
+    
+    cat <<HTML > $FILENAME
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +21,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE ARCHITECTURE | NEURAL MATRIX</title>
+    <title>$TITLE | NEURAL MATRIX</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -28,10 +39,10 @@
     </nav>
 
     <main style="padding: 120px 20px 60px; text-align: center;">
-        <div class="status-badge">/// SECTOR: PRO</div>
-        <h1 class="mega-title" style="font-size: 3rem;">THE ARCHITECTURE</h1>
-        <h2 style="font-family:var(--font-mono); color:var(--theme); font-size:1.2rem; margin-bottom:20px;">FOR THE PROFESSIONAL</h2>
-        <p style="max-width:600px; margin:0 auto 60px; color:#aaa; line-height:1.6;">Standardized, high-performance assets for engineering robust systems.</p>
+        <div class="status-badge">$TAG</div>
+        <h1 class="mega-title" style="font-size: 3rem;">$TITLE</h1>
+        <h2 style="font-family:var(--font-mono); color:var(--theme); font-size:1.2rem; margin-bottom:20px;">$SUBTITLE</h2>
+        <p style="max-width:600px; margin:0 auto 60px; color:#aaa; line-height:1.6;">$DESC</p>
 
         <div class="bento-grid">
             <div class="glass-panel">
@@ -40,7 +51,7 @@
             </div>
             <div class="glass-panel">
                 <h3 style="color:#fff;">AVAILABLE ASSETS</h3>
-                <p>Access the repository of titanium-grade software designed for THE ARCHITECTURE.</p>
+                <p>Access the repository of titanium-grade software designed for $TITLE.</p>
                 <a href="product.html" class="btn-primary" style="display:block; text-align:center; margin-top:20px;">ACCESS INTEL</a>
             </div>
             <div class="glass-panel">
@@ -88,3 +99,15 @@
     </script>
 </body>
 </html>
+HTML
+}
+
+# EXECUTE COLONIZATION
+create_page "creator.html" "THE FOUNDRY" "FOR THE CREATOR" "Tools for those who build from nothing. Raw code. Pure potential." "/// SECTOR: CREATOR"
+create_page "pro.html" "THE ARCHITECTURE" "FOR THE PROFESSIONAL" "Standardized, high-performance assets for engineering robust systems." "/// SECTOR: PRO"
+create_page "visuals.html" "THE ALCHEMY" "FOR THE DESIGNER" "Glass, Light, and Motion. Visual languages that command attention." "/// SECTOR: VISUALS"
+create_page "entrepreneur.html" "THE VANGUARD" "FOR THE ENTREPRENEUR" "Sovereign systems to launch your empire without technical debt." "/// SECTOR: ENTREPRENEUR"
+create_page "business.html" "THE SYNDICATE" "FOR THE BUSINESS" "Scalable, secure, and efficient digital infrastructure." "/// SECTOR: BUSINESS"
+create_page "enterprise.html" "THE DOMINION" "FOR THE ENTERPRISE" "Global scale. Zero downtime. The ultimate expression of digital power." "/// SECTOR: ENTERPRISE"
+
+echo ":: SECTORS COLONIZED ::"
