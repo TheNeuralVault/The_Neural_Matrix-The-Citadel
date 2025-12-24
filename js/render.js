@@ -3,7 +3,6 @@ import { enableSpatialInteraction } from './spatial-core.js';
 import { enableSpatialPhysics } from './physics-core.js';
 import { renderWebGPUMesh } from './mesh-core.js';
 
-// RENDERERS
 const VisualRenderers = {
     "SENTINEL": renderSentinel,
     "GLASS_UI": renderGlassUI,
@@ -14,21 +13,15 @@ const VisualRenderers = {
 async function initSystem() {
     const container = document.getElementById('app');
     if (!container) return;
-    
-    // RITUAL: Glyph Loader
     showGlyphLoader();
     await new Promise(r => setTimeout(r, 600)); 
-
     try {
         const response = await fetch('config/registry.json');
         const data = await response.json();
-        
         hideGlyphLoader();
         transitionIn(); 
-
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
-
         if (productId) {
             const product = data.products.find(p => p.id === productId);
             if (product) renderDetail(product, container);
@@ -46,14 +39,18 @@ function renderCatalog(products, container) {
     let html = '<div class="bento-grid">';
     products.forEach(p => {
         const theme = p.theme ? p.theme.accent : "var(--theme)";
+        const isLocked = p.status === 'classified';
+        const badge = isLocked ? '<span style="color:#666; font-size:0.6rem; border:1px solid #444; padding:2px 6px;">LOCKED</span>' : '';
+        
         html += `
-            <div class="glass-panel" style="--local-accent:${theme}; border-left:2px solid ${theme};" onclick="navigateTo('product.html?id=${p.id}')">
+            <div class="glass-panel" style="--local-accent:${theme}; border-left:2px solid ${isLocked ? '#444' : theme}; opacity:${isLocked ? 0.7 : 1};" onclick="navigateTo('product.html?id=${p.id}')">
                 <div style="pointer-events:none;">
                     <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-                        <span class="status-badge" style="color:${theme}; border-color:${theme};">${p.tags[0]}</span>
+                        <span class="status-badge" style="color:${isLocked ? '#888' : theme}; border-color:${isLocked ? '#444' : theme};">${p.tags[0]}</span>
+                        ${badge}
                         <span style="font-family:var(--font-mono); color:#666;">${p.id}</span>
                     </div>
-                    <h3 style="color:#fff;">${p.name}</h3>
+                    <h3 style="color:${isLocked ? '#aaa' : '#fff'};">${p.name}</h3>
                 </div>
             </div>`;
     });
@@ -68,24 +65,35 @@ window.navigateTo = function(url) {
 function renderDetail(p, container) {
     document.title = p.name;
     const theme = p.theme ? p.theme.accent : "var(--theme)";
-    document.documentElement.style.setProperty('--theme', theme);
+    const isLocked = p.status === 'classified';
+    
+    // LOCKED UI LOGIC
+    const actionButton = isLocked 
+        ? `<button class="btn-primary" style="background:#333; color:#888; cursor:not-allowed; box-shadow:none;">// IN DEVELOPMENT</button>`
+        : `<a href="${p.stripe_link || '#'}" class="btn-primary" style="background:${theme}; color:#000;">ACQUIRE PROTOCOL</a>`;
+
+    const priceDisplay = isLocked
+        ? `<span style="color:#666; font-family:var(--font-mono); font-size:1.5rem;">[CLASSIFIED]</span>`
+        : `<span style="color:${theme}; font-family:var(--font-mono); font-size:1.5rem;">$${p.price}</span>`;
+
+    document.documentElement.style.setProperty('--theme', isLocked ? '#888' : theme);
     
     const visualKey = p.visual || "NONE";
     const visualHTML = `<div id="visual-container" style="width:100%; height:300px; position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.1); background:#000;"></div>`;
     
     container.innerHTML = `
         <div class="glass-panel" style="max-width:900px; margin:0 auto;">
-            <a href="#" onclick="navigateTo('product.html')" style="color:${theme}; font-family:var(--font-mono); margin-bottom:20px; display:block;">&larr; INDEX</a>
+            <a href="#" onclick="navigateTo('product.html')" style="color:${isLocked ? '#888' : theme}; font-family:var(--font-mono); margin-bottom:20px; display:block;">&larr; INDEX</a>
             <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:20px; margin-bottom:20px;">
-                <h1 style="margin:0; font-size:2rem; text-transform:uppercase;">${p.name}</h1>
-                <div class="status-badge" style="color:${theme}; border-color:${theme};">${p.tags[0]}</div>
+                <h1 style="margin:0; font-size:2rem; text-transform:uppercase; color:${isLocked ? '#aaa' : '#fff'}">${p.name}</h1>
+                <div class="status-badge" style="color:${isLocked ? '#888' : theme}; border-color:${isLocked ? '#444' : theme};">${p.tags[0]}</div>
             </div>
             ${visualHTML}
             <div style="margin-top:30px;">
-                <p style="font-size:1.1rem; color:#ccc; line-height:1.6;">${p.description}</p>
+                <p style="font-size:1.1rem; color:${isLocked ? '#888' : '#ccc'}; line-height:1.6;">${p.description}</p>
                 <div style="margin-top:30px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center;">
-                    <span style="font-size:1.5rem; color:${theme}; font-family:var(--font-mono);">$${p.price}</span>
-                    <a href="${p.stripe_link || '#'}" class="btn-primary" style="background:${theme}; color:#000;">ACQUIRE</a>
+                    ${priceDisplay}
+                    ${actionButton}
                 </div>
             </div>
         </div>

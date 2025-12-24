@@ -12,7 +12,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "creator_001.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ff2a2a"
@@ -20,7 +20,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "CREATOR-002",
@@ -32,7 +33,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "creator_002.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ff2a2a"
@@ -40,7 +41,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "CREATOR-003",
@@ -52,7 +54,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "creator_003.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ff2a2a"
@@ -60,7 +62,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "CREATOR-004",
@@ -72,7 +75,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "creator_004.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ff2a2a"
@@ -80,7 +83,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "CREATOR-005",
@@ -92,7 +96,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "creator_005.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ff2a2a"
@@ -100,7 +104,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "CREATOR-006",
@@ -112,7 +117,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "creator_006.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ff2a2a"
@@ -120,7 +125,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "CREATOR-007",
@@ -132,7 +138,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "creator_007.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ff2a2a"
@@ -140,7 +146,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "PRO-001",
@@ -152,7 +159,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "pro_001.zip",
+      "download_file": null,
       "visual": "SENTINEL",
       "theme": {
         "accent": "#0088ff"
@@ -160,7 +167,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "PRO-002",
@@ -172,7 +180,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "pro_002.zip",
+      "download_file": null,
       "visual": "SENTINEL",
       "theme": {
         "accent": "#0088ff"
@@ -180,7 +188,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "PRO-003",
@@ -192,7 +201,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "pro_003.zip",
+      "download_file": null,
       "visual": "SENTINEL",
       "theme": {
         "accent": "#0088ff"
@@ -200,7 +209,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "PRO-004",
@@ -212,7 +222,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "pro_004.zip",
+      "download_file": null,
       "visual": "SENTINEL",
       "theme": {
         "accent": "#0088ff"
@@ -220,7 +230,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "PRO-005",
@@ -232,7 +243,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "pro_005.zip",
+      "download_file": null,
       "visual": "SENTINEL",
       "theme": {
         "accent": "#0088ff"
@@ -240,7 +251,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "PRO-006",
@@ -252,7 +264,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "pro_006.zip",
+      "download_file": null,
       "visual": "SENTINEL",
       "theme": {
         "accent": "#0088ff"
@@ -260,7 +272,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "PRO-007",
@@ -272,7 +285,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "pro_007.zip",
+      "download_file": null,
       "visual": "SENTINEL",
       "theme": {
         "accent": "#0088ff"
@@ -280,7 +293,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "VISUALS-001",
@@ -292,7 +306,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "visuals_001.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#bc13fe"
@@ -300,7 +314,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "VISUALS-002",
@@ -312,7 +327,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "visuals_002.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#bc13fe"
@@ -320,7 +335,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "VISUALS-003",
@@ -332,7 +348,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "visuals_003.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#bc13fe"
@@ -340,7 +356,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "VISUALS-004",
@@ -352,7 +369,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "visuals_004.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#bc13fe"
@@ -360,7 +377,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "VISUALS-005",
@@ -372,7 +390,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "visuals_005.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#bc13fe"
@@ -380,7 +398,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "VISUALS-006",
@@ -392,7 +411,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "visuals_006.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#bc13fe"
@@ -400,7 +419,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "VISUALS-007",
@@ -412,7 +432,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "visuals_007.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#bc13fe"
@@ -420,7 +440,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTREPRENEUR-001",
@@ -432,7 +453,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "entrepreneur_001.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ffb300"
@@ -440,7 +461,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTREPRENEUR-002",
@@ -452,7 +474,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "entrepreneur_002.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ffb300"
@@ -460,7 +482,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTREPRENEUR-003",
@@ -472,7 +495,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "entrepreneur_003.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ffb300"
@@ -480,7 +503,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTREPRENEUR-004",
@@ -492,7 +516,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "entrepreneur_004.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ffb300"
@@ -500,7 +524,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTREPRENEUR-005",
@@ -512,7 +537,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "entrepreneur_005.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ffb300"
@@ -520,7 +545,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTREPRENEUR-006",
@@ -532,7 +558,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "entrepreneur_006.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ffb300"
@@ -540,7 +566,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTREPRENEUR-007",
@@ -552,7 +579,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "entrepreneur_007.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#ffb300"
@@ -560,7 +587,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "BUSINESS-001",
@@ -572,7 +600,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "business_001.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#00d9ff"
@@ -580,7 +608,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "BUSINESS-002",
@@ -592,7 +621,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "business_002.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#00d9ff"
@@ -600,7 +629,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "BUSINESS-003",
@@ -612,7 +642,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "business_003.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#00d9ff"
@@ -620,7 +650,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "BUSINESS-004",
@@ -632,7 +663,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "business_004.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#00d9ff"
@@ -640,7 +671,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "BUSINESS-005",
@@ -652,7 +684,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "business_005.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#00d9ff"
@@ -660,7 +692,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "BUSINESS-006",
@@ -672,7 +705,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "business_006.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#00d9ff"
@@ -680,7 +713,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "BUSINESS-007",
@@ -692,7 +726,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "business_007.zip",
+      "download_file": null,
       "visual": "GLASS_UI",
       "theme": {
         "accent": "#00d9ff"
@@ -700,7 +734,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTERPRISE-001",
@@ -712,7 +747,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "enterprise_001.zip",
+      "download_file": null,
       "visual": "WEBGPU",
       "theme": {
         "accent": "#ffffff"
@@ -720,7 +755,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTERPRISE-002",
@@ -732,7 +768,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "enterprise_002.zip",
+      "download_file": null,
       "visual": "WEBGPU",
       "theme": {
         "accent": "#ffffff"
@@ -740,7 +776,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTERPRISE-003",
@@ -752,7 +789,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "enterprise_003.zip",
+      "download_file": null,
       "visual": "WEBGPU",
       "theme": {
         "accent": "#ffffff"
@@ -760,7 +797,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTERPRISE-004",
@@ -772,7 +810,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "enterprise_004.zip",
+      "download_file": null,
       "visual": "WEBGPU",
       "theme": {
         "accent": "#ffffff"
@@ -780,7 +818,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTERPRISE-005",
@@ -792,7 +831,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "enterprise_005.zip",
+      "download_file": null,
       "visual": "WEBGPU",
       "theme": {
         "accent": "#ffffff"
@@ -800,7 +839,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTERPRISE-006",
@@ -812,7 +852,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "enterprise_006.zip",
+      "download_file": null,
       "visual": "WEBGPU",
       "theme": {
         "accent": "#ffffff"
@@ -820,7 +860,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     },
     {
       "id": "ENTERPRISE-007",
@@ -832,7 +873,7 @@
         "TITANIUM"
       ],
       "stripe_link": null,
-      "download_file": "enterprise_007.zip",
+      "download_file": null,
       "visual": "WEBGPU",
       "theme": {
         "accent": "#ffffff"
@@ -840,7 +881,8 @@
       "spatial": {
         "tilt": true,
         "distortion": true
-      }
+      },
+      "status": "classified"
     }
   ]
 }
