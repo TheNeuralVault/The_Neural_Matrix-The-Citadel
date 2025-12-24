@@ -1,38 +1,71 @@
-/* NEURAL MATRIX // GOD ENGINE (VISUALS) */
+/* NEURAL MATRIX // GOD ENGINE (VISUALS) v2.0 */
 
-// 1. MATRIX RAIN
+// 1. CHROMATIC MATRIX RAIN
 const initMatrix = () => {
     const canvas = document.getElementById('matrix-rain');
     if(!canvas) return;
     const ctx = canvas.getContext('2d');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    
+    // Resize handler
+    const resize = () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    };
+    window.addEventListener('resize', resize);
+    resize();
     
     const chars = "01XYZAﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ";
     const fontSize = 14;
-    const columns = canvas.width / fontSize;
+    const columns = Math.floor(window.innerWidth / fontSize);
     const drops = Array(Math.ceil(columns)).fill(1);
     
+    // COLOR PALETTE (Green -> Blue -> Red -> Grey -> White)
+    const palette = [
+        "#0aff00", // Neon Green
+        "#00f3ff", // Neon Blue
+        "#ff0055", // Neon Red
+        "#888888", // Titanium Grey
+        "#ffffff"  // Pure White
+    ];
+    
+    let tick = 0;
+    
     const draw = () => {
-        ctx.fillStyle = "rgba(3, 3, 3, 0.05)";
+        // 1. Create Fade Effect (The Trail)
+        ctx.fillStyle = "rgba(3, 3, 3, 0.08)";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = "#00f3ff"; // Cyan
+        
+        // 2. Determine Current Color
+        // Change color every 200 frames (approx 6 seconds)
+        tick++;
+        const colorIndex = Math.floor(tick / 200) % palette.length;
+        ctx.fillStyle = palette[colorIndex];
+        
         ctx.font = fontSize + "px monospace";
         
+        // 3. Draw Drops
         for(let i=0; i<drops.length; i++) {
             const text = chars[Math.floor(Math.random()*chars.length)];
             ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-            if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+            
+            // Randomly reset drop to top
+            if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
             drops[i]++;
         }
     };
-    setInterval(draw, 33);
+    
+    setInterval(draw, 33); // ~30 FPS
 };
 
 // 2. 3D ARTIFACT (THREE.JS)
 const initArtifact = () => {
     const container = document.getElementById('singularity-vessel');
     if(!container || !window.THREE) return;
+    
+    // Cleanup previous scene if exists (hot reload safety)
+    container.innerHTML = '';
     
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(50, container.clientWidth/container.clientHeight, 0.1, 100);
@@ -79,6 +112,15 @@ const initArtifact = () => {
         renderer.render(scene, camera);
     };
     animate();
+    
+    // Handle Window Resize for 3D
+    window.addEventListener('resize', () => {
+        if(container.clientWidth > 0 && container.clientHeight > 0) {
+            camera.aspect = container.clientWidth / container.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.clientWidth, container.clientHeight);
+        }
+    });
 };
 
 window.onload = () => {
