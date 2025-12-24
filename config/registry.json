@@ -3,22 +3,22 @@
   "currency": "USD",
   "products": [
     {
-      "id": "PROD-001",
-      "name": "The Sentinel: SEO Automator",
+      "id": "ARTIFACT-001",
+      "name": "The Sentinel Protocol",
       "price": 99.00,
-      "description": "Autonomous Python engine for sitemap generation, meta-tag injection, and schema validation. Zero dependencies. Pure speed.",
+      "description": "Autonomous Python engine for SEO dominance. This artifact generates sitemaps, injects metadata, and validates schema.",
       "image": "assets/images/sentinel_core.jpg",
-      "tags": ["Software", "Python", "Automation", "SEO"],
+      "tags": ["Artifact", "Python", "Class-S"],
       "stripe_link": "#",
       "download_file": "sentinel_v1.zip"
     },
     {
-      "id": "PROD-002",
-      "name": "Neural Matrix: Glass UI Kit",
+      "id": "ARTIFACT-002",
+      "name": "Glass UI: Titan Edition",
       "price": 49.00,
-      "description": "The complete HTML5/CSS3 framework used to build this Citadel. Drop-in ready for high-end digital architecture.",
+      "description": "The visual source code of this Citadel. A complete HTML5/CSS3 framework for building Sovereign Digital Fortresses.",
       "image": "assets/images/glass_ui.jpg",
-      "tags": ["Code", "CSS", "Frontend"],
+      "tags": ["Artifact", "Frontend", "Class-A"],
       "stripe_link": "#",
       "download_file": "glass_ui_kit.zip"
     }
