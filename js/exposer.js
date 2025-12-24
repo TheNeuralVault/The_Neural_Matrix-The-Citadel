@@ -1,70 +1,31 @@
 /**
- * NEURAL MATRIX VAULT: SOVEREIGN ENGINE [MAGNUS OPUS EDITION]
- * Architect: Jonathan Battles | Guide: Magnus Opus
+ * MAGNUS OPUS: SOVEREIGN EXPOSER [COMPLETE AUTOMATION v4.0]
  */
-
-const SOVEREIGN_CORE = {
-    version: "Ω-1.0",
-    mark: "Σ-JB-MO-2025-GALAXY",
-    
-    // --- 1. GLASS PROTOCOL & ZERO-TRUST DECRYPTION ---
-    async decryptArtifact(blob, userKey) {
-        console.log(":: INITIATING GLASS PROTOCOL ::");
-        // Uses WebCrypto API for local, zero-trust decryption
-        const keyBuffer = b64ToBuffer(userKey);
-        // Alchemy happens here...
-    },
-
-    // --- 2. MULTI-VAULT FUSION & TELEPATHY ---
-    async fuseVaults(vaultIds) {
-        console.log(":: INTER-VAULT TELEPATHY: ANALYZING DEPENDENCIES ::");
-        // Logic to merge shards into a single Singularity Vault
-    },
-
-    // --- 3. NEURAL MATRIX MUTATION ---
-    mutateArtifact(baseData, buyerHash) {
-        console.log(":: MUTATING DNA: GENERATIVE ARTIFACT INITIALIZED ::");
-        // Injects unique buyer DNA into the artifact metadata
-    },
-
-    // --- 4. GHOST PROTOCOL (EPHEMERAL) ---
-    async handleEphemeral(artifactId) {
-        // Logic for self-destructing download links
-    }
-};
-
-// --- AUTONOMOUS LORE & WORLD BUILDING ---
-async function synthesizeGalaxy() {
+async function igniteGalaxy() {
     try {
-        const [inventory, graph] = await Promise.all([
-            fetch('./config/inventory.json').then(r => r.json()),
-            fetch('./config/vault_graph.json').then(r => r.json())
-        ]);
-
+        const response = await fetch('./config/public_catalog.json');
+        if (!response.ok) throw new Error("Catalog not found");
+        const catalog = await response.json();
         const grid = document.getElementById('vault-grid');
-        grid.innerHTML = ''; 
+        
+        if (!grid) return;
 
-        Object.keys(inventory).forEach(id => {
-            const dependencies = graph[id]?.dependencies || [];
-            renderArtifact(id, inventory[id], dependencies, grid);
-        });
-
-        console.log(`:: SOVEREIGN MARK VERIFIED: ${SOVEREIGN_CORE.mark} ::`);
+        grid.innerHTML = Object.entries(catalog).map(([id, data]) => `
+            <div class="artifact-card">
+                <div class="sovereign-mark">Σ-JB-MO</div>
+                <h3>${data.name}</h3>
+                <p>${data.description}</p>
+                <div class="specs-box">
+                    <strong>SPECS:</strong> ${data.specs}
+                </div>
+                <a href="${data.price_url}" class="awaken-btn">AWAKEN FOR ACCESS</a>
+            </div>
+        `).join('');
+        
+        console.log(":: GALAXY FULLY MATERIALIZED ::");
     } catch (err) {
-        console.error(":: SENTIENCE PROTOCOL: SELF-HEALING INITIALIZED ::", err);
+        console.error(":: EXPOSER OFFLINE ::", err);
     }
 }
 
-function renderArtifact(id, data, deps, container) {
-    const card = document.createElement('div');
-    card.className = 'artifact-card';
-    card.innerHTML = `
-        <div class="sovereign-seal">JB+MO</div>
-        <h3>${id}</h3>
-        <p>GALAXY NODES: ${deps.length > 0 ? deps.join(' + ') : 'SINGULARITY'}</p>
-        <button onclick="SOVEREIGN_CORE.handleEphemeral('${id}')">AWAKEN</button>
-    `;
-    container.appendChild(card);
-}
-
-document.addEventListener("DOMContentLoaded", synthesizeGalaxy);
+document.addEventListener("DOMContentLoaded", igniteGalaxy);
