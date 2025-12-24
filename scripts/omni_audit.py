@@ -46,21 +46,18 @@ def audit_treasury():
         log("INFO", f"Found {len(products)} Artifacts in Registry.")
         
         for p in products:
-            # 1. Check Price/Stripe
             if not p.get("stripe_link") or "stripe.com" not in p["stripe_link"]:
                 log("FAIL", f"Product '{p['name']}' has NO Payment Link.")
             else:
                 log("PASS", f"Product '{p['name']}' is monetized.")
 
-            # 2. Check Physical Asset (The Download)
             dl_file = p.get("download_file")
             dl_path = os.path.join("public/downloads", dl_file)
             if check_file(dl_path):
                 log("PASS", f"   >> Payload Verified: {dl_file}")
             else:
-                log("FAIL", f"   >> PAYLOAD MISSING: {dl_path} (Customer will get 404!)")
-
-            # 3. Check Visual Asset (The Image)
+                log("FAIL", f"   >> PAYLOAD MISSING: {dl_path}")
+            
             img_path = p.get("image")
             if img_path and not check_file(img_path):
                  log("FAIL", f"   >> Image Missing: {img_path}")
@@ -70,8 +67,6 @@ def audit_treasury():
 
 def audit_structure():
     print(f"\n{BOLD}/// SECTOR 2: THE STRUCTURE (LINK ROT){RESET}")
-    
-    # Simple regex to find local hrefs
     link_pattern = re.compile(r'href=["\'](.*?)["\']')
     
     for root, dirs, files in os.walk(HTML_ROOT):
@@ -86,18 +81,18 @@ def audit_structure():
                     
                     links = link_pattern.findall(content)
                     for link in links:
-                        # Skip external, anchors, mailto, etc.
-                        if link.startswith("http") or link.startswith("#") or link.startswith("mailto"):
+                        # IGNORE: External, Anchors, Mailto, AND Template Variables
+                        if (link.startswith("http") or 
+                            link.startswith("#") or 
+                            link.startswith("mailto") or 
+                            "${" in link):
                             continue
                         
-                        # Strip query params
                         clean_link = link.split('?')[0]
-                        
-                        # Resolve path
                         if clean_link.startswith("/"):
-                            target = "." + clean_link # Absolute from root
+                            target = "." + clean_link
                         else:
-                            target = os.path.join(root, clean_link) # Relative
+                            target = os.path.join(root, clean_link)
                         
                         if not os.path.exists(target):
                             log("FAIL", f"Dead Link in {file}: Targets '{link}' (Not Found)")
@@ -109,7 +104,6 @@ def audit_logic():
     print(f"\n{BOLD}/// SECTOR 3: THE LOGIC (PYTHON CORES){RESET}")
     for script in REQUIRED_SCRIPTS:
         if check_file(script):
-            # Compile check
             try:
                 with open(script, 'r') as f:
                     compile(f.read(), script, 'exec')
@@ -120,7 +114,7 @@ def audit_logic():
             log("FAIL", f"Missing Script: {script}")
 
 def main():
-    print(f"{BOLD}/// NEURAL MATRIX OMNI AUDIT v1.0 ///{RESET}")
+    print(f"{BOLD}/// NEURAL MATRIX OMNI AUDIT v1.1 ///{RESET}")
     audit_treasury()
     audit_logic()
     audit_structure()
