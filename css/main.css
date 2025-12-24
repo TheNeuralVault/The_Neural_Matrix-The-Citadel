@@ -41,3 +41,20 @@ a { text-decoration: none; color: inherit; }
 .glass-panel h3 { margin: 0 0 10px; font-size: 1.5rem; }
 .glass-panel p { color: #888; font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.6; }
 .price-tag { color: var(--theme); font-family: var(--font-mono); font-size: 1.2rem; margin-top: 20px; display: block; }
+
+/* SECTOR COLOR ENGINES */
+.sector-creator { --theme: #ff2a2a; --accent: #ffae00; }
+.sector-pro { --theme: #0088ff; --accent: #00ff44; }
+.sector-visuals { --theme: #bc13fe; --accent: #ff00cc; }
+.sector-entrepreneur { --theme: #ffb300; --accent: #ffe600; }
+.sector-business { --theme: #00d9ff; --accent: #ffffff; }
+.sector-enterprise { --theme: #ffffff; --accent: #888888; }
+
+/* Apply Theme to Hover State */
+.sector-node:hover {
+    color: var(--theme);
+    border-color: var(--theme);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05));
+    box-shadow: 0 0 15px var(--theme);
+    text-shadow: 0 0 5px var(--theme);
+}

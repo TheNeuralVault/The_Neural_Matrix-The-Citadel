@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# TEMPLATE FUNCTION
 create_page() {
     FILENAME=$1
     TITLE=$2
     SUBTITLE=$3
     DESC=$4
     TAG=$5
+    THEME=$6
     
     cat <<HTML > $FILENAME
 <!DOCTYPE html>
@@ -24,6 +24,12 @@ create_page() {
     <title>$TITLE | NEURAL MATRIX</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        :root { --theme: $THEME; } /* Override Global Theme */
+        .status-badge { border-color: var(--theme); color: var(--theme); }
+        .mega-title span { color: var(--theme); }
+        .glass-panel:hover { border-color: var(--theme); }
+    </style>
 </head>
 <body>
     <canvas id="matrix-rain"></canvas>
@@ -52,7 +58,7 @@ create_page() {
             <div class="glass-panel">
                 <h3 style="color:#fff;">AVAILABLE ASSETS</h3>
                 <p>Access the repository of titanium-grade software designed for $TITLE.</p>
-                <a href="product.html" class="btn-primary" style="display:block; text-align:center; margin-top:20px;">ACCESS INTEL</a>
+                <a href="product.html" class="btn-primary" style="display:block; text-align:center; margin-top:20px; background:var(--theme); color:#000;">ACCESS INTEL</a>
             </div>
             <div class="glass-panel">
                 <h3 style="color:#fff;">SYSTEM STATUS</h3>
@@ -69,45 +75,19 @@ create_page() {
         <span>&copy; 2025 NEURAL MATRIX VAULT</span>
     </footer>
 
-    <script>
-        const canvas = document.getElementById('matrix-rain');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        const chars = "01XYZAﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ";
-        const fontSize = 14;
-        const columns = Math.floor(window.innerWidth / fontSize);
-        const drops = Array(Math.ceil(columns)).fill(1);
-        const palette = ["#0aff00", "#00f3ff", "#ff0055", "#888888", "#ffffff"];
-        let tick = 0;
-        function draw() {
-            ctx.fillStyle = "rgba(3, 3, 3, 0.08)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            tick++;
-            const colorIndex = Math.floor(tick / 200) % palette.length;
-            ctx.fillStyle = palette[colorIndex];
-            ctx.font = fontSize + "px monospace";
-            for(let i=0; i<drops.length; i++) {
-                const text = chars[Math.floor(Math.random()*chars.length)];
-                ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-                if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-                drops[i]++;
-            }
-        }
-        setInterval(draw, 33);
-        window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
-    </script>
+    <script src="js/visuals.js"></script>
 </body>
 </html>
 HTML
 }
 
-# EXECUTE COLONIZATION
-create_page "creator.html" "THE FOUNDRY" "FOR THE CREATOR" "Tools for those who build from nothing. Raw code. Pure potential." "/// SECTOR: CREATOR"
-create_page "pro.html" "THE ARCHITECTURE" "FOR THE PROFESSIONAL" "Standardized, high-performance assets for engineering robust systems." "/// SECTOR: PRO"
-create_page "visuals.html" "THE ALCHEMY" "FOR THE DESIGNER" "Glass, Light, and Motion. Visual languages that command attention." "/// SECTOR: VISUALS"
-create_page "entrepreneur.html" "THE VANGUARD" "FOR THE ENTREPRENEUR" "Sovereign systems to launch your empire without technical debt." "/// SECTOR: ENTREPRENEUR"
-create_page "business.html" "THE SYNDICATE" "FOR THE BUSINESS" "Scalable, secure, and efficient digital infrastructure." "/// SECTOR: BUSINESS"
-create_page "enterprise.html" "THE DOMINION" "FOR THE ENTERPRISE" "Global scale. Zero downtime. The ultimate expression of digital power." "/// SECTOR: ENTERPRISE"
+# EXECUTE WITH COLOR CODES
+# Creator: Red | Pro: Blue | Visuals: Purple | Entrep: Gold | Biz: Teal | Enterprise: White
+create_page "creator.html" "THE FOUNDRY" "FOR THE CREATOR" "Raw code. Pure potential." "/// SECTOR: CREATOR" "#ff2a2a"
+create_page "pro.html" "THE ARCHITECTURE" "FOR THE PROFESSIONAL" "Standardized assets." "/// SECTOR: PRO" "#0088ff"
+create_page "visuals.html" "THE ALCHEMY" "FOR THE DESIGNER" "Glass, Light, and Motion." "/// SECTOR: VISUALS" "#bc13fe"
+create_page "entrepreneur.html" "THE VANGUARD" "FOR THE ENTREPRENEUR" "Launch your empire." "/// SECTOR: ENTREPRENEUR" "#ffb300"
+create_page "business.html" "THE SYNDICATE" "FOR THE BUSINESS" "Scalable infrastructure." "/// SECTOR: BUSINESS" "#00d9ff"
+create_page "enterprise.html" "THE DOMINION" "FOR THE ENTERPRISE" "Global scale. Zero downtime." "/// SECTOR: ENTERPRISE" "#ffffff"
 
-echo ":: SECTORS COLONIZED ::"
+echo ":: CHROMATIC SECTORS DEPLOYED ::"

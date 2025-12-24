@@ -13,6 +13,12 @@
     <title>THE VANGUARD | NEURAL MATRIX</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        :root { --theme: #ffb300; } /* Override Global Theme */
+        .status-badge { border-color: var(--theme); color: var(--theme); }
+        .mega-title span { color: var(--theme); }
+        .glass-panel:hover { border-color: var(--theme); }
+    </style>
 </head>
 <body>
     <canvas id="matrix-rain"></canvas>
@@ -31,7 +37,7 @@
         <div class="status-badge">/// SECTOR: ENTREPRENEUR</div>
         <h1 class="mega-title" style="font-size: 3rem;">THE VANGUARD</h1>
         <h2 style="font-family:var(--font-mono); color:var(--theme); font-size:1.2rem; margin-bottom:20px;">FOR THE ENTREPRENEUR</h2>
-        <p style="max-width:600px; margin:0 auto 60px; color:#aaa; line-height:1.6;">Sovereign systems to launch your empire without technical debt.</p>
+        <p style="max-width:600px; margin:0 auto 60px; color:#aaa; line-height:1.6;">Launch your empire.</p>
 
         <div class="bento-grid">
             <div class="glass-panel">
@@ -41,7 +47,7 @@
             <div class="glass-panel">
                 <h3 style="color:#fff;">AVAILABLE ASSETS</h3>
                 <p>Access the repository of titanium-grade software designed for THE VANGUARD.</p>
-                <a href="product.html" class="btn-primary" style="display:block; text-align:center; margin-top:20px;">ACCESS INTEL</a>
+                <a href="product.html" class="btn-primary" style="display:block; text-align:center; margin-top:20px; background:var(--theme); color:#000;">ACCESS INTEL</a>
             </div>
             <div class="glass-panel">
                 <h3 style="color:#fff;">SYSTEM STATUS</h3>
@@ -58,33 +64,6 @@
         <span>&copy; 2025 NEURAL MATRIX VAULT</span>
     </footer>
 
-    <script>
-        const canvas = document.getElementById('matrix-rain');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        const chars = "01XYZAﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ";
-        const fontSize = 14;
-        const columns = Math.floor(window.innerWidth / fontSize);
-        const drops = Array(Math.ceil(columns)).fill(1);
-        const palette = ["#0aff00", "#00f3ff", "#ff0055", "#888888", "#ffffff"];
-        let tick = 0;
-        function draw() {
-            ctx.fillStyle = "rgba(3, 3, 3, 0.08)";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            tick++;
-            const colorIndex = Math.floor(tick / 200) % palette.length;
-            ctx.fillStyle = palette[colorIndex];
-            ctx.font = fontSize + "px monospace";
-            for(let i=0; i<drops.length; i++) {
-                const text = chars[Math.floor(Math.random()*chars.length)];
-                ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-                if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-                drops[i]++;
-            }
-        }
-        setInterval(draw, 33);
-        window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
-    </script>
+    <script src="js/visuals.js"></script>
 </body>
 </html>
