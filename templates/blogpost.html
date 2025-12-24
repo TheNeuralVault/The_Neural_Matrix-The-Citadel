@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P1PCVNCCE4"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P1PCVNCCE4');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | NEURAL MATRIX</title>
+    <meta name="description" content="{{ description }}">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/main.css">
+    <style>
+        .blog-content { max-width: 800px; margin: 0 auto; text-align: left; font-size: 1.1rem; line-height: 1.8; color: #ccc; }
+        .blog-content h2 { color: #fff; margin-top: 40px; font-size: 1.8rem; }
+        .blog-content p { margin-bottom: 20px; }
+        .blog-content strong { color: var(--theme); }
+        .blog-content code { background: #111; padding: 2px 6px; border: 1px solid #333; font-family: var(--font-mono); color: var(--theme); }
+    </style>
+</head>
+<body>
+    <canvas id="matrix-rain"></canvas>
+    <div class="scanlines"></div>
+    <script src="../../js/defend.js"></script>
+
+    <nav class="hud-header">
+        <div class="brand">NEURAL_MATRIX</div>
+        <div>
+            <a href="../../index.html" class="nav-item">CITADEL</a>
+            <a href="../../product.html" class="nav-item">ARTIFACTS</a>
+        </div>
+    </nav>
+
+    <main style="padding: 120px 20px 60px;">
+        <article class="glass-panel" style="max-width: 900px; margin: 0 auto; padding: 40px;">
+            <div class="status-badge">/// SIGNAL: BROADCAST</div>
+            <h1 class="mega-title" style="font-size: 2.5rem; text-align: center; margin-bottom: 10px;">{{ title }}</h1>
+            <div style="text-align: center; font-family: var(--font-mono); color: #666; margin-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 20px;">
+                PUBLISHED: {{ date }} // AUTHOR: MAGNUS OPUS
+            </div>
+            
+            <div class="blog-content">
+                {{ content }}
+            </div>
+
+            <div style="margin-top: 60px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;">
+                <h3 style="color: #fff;">EQUIP YOURSELF</h3>
+                <p>Build systems like this with Titanium.</p>
+                <a href="../../product.html" class="btn-primary">ACCESS INTEL</a>
+            </div>
+        </article>
+    </main>
+
+    <script src="../../js/visuals.js"></script>
+</body>
+</html>
