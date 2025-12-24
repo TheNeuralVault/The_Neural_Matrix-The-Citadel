@@ -11,24 +11,79 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artifacts | Neural Matrix Vault</title>
+    <title>ARTIFACTS | NEURAL MATRIX VAULT</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;500;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/main.css">
+    
+    <style>
+        .product-hero { padding-top: 120px; text-align: center; }
+        .bento-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; }
+    </style>
 </head>
 <body>
+    <canvas id="matrix-rain"></canvas>
+    <div class="scanlines"></div>
+
     <script src="js/defend.js"></script>
     
-    <nav style="padding: 1rem 2rem; border-bottom: 1px solid var(--glass-border);">
-        <div class="container">
-            <a href="index.html" style="color: #fff; text-decoration: none; font-weight: bold;">NEURAL MATRIX</a>
+    <nav class="hud-header">
+        <div class="brand">NEURAL_MATRIX</div>
+        <div>
+            <a href="index.html" class="nav-item">CITADEL</a>
+            <a href="about.html" class="nav-item">ORIGIN</a>
         </div>
     </nav>
 
-    <main class="container" style="padding: 4rem 0;">
-        <div id="app">
-            <p style="color: var(--neon-cyan); font-family: var(--font-mono);">// LOADING ARCHIVE...</p>
+    <main>
+        <div class="product-hero">
+            <div class="status-badge blink">/// ACCESSING ARCHIVE...</div>
+            <h1 class="mega-title" style="font-size: 3rem;">ARTIFACT <span style="color:var(--theme)">INDEX</span></h1>
         </div>
+        
+        <div id="app" style="width: 100%; min-height: 500px;"></div>
     </main>
+    
+    <footer style="text-align:center; padding:40px; color:#666; font-family:var(--font-mono); font-size:0.8rem; border-top:1px solid rgba(255,255,255,0.1); margin-top: 40px;">
+        <a href="legal.html" style="color:#666; margin:0 10px;">THE LAW</a>
+        <span>&copy; 2025 NEURAL MATRIX</span>
+    </footer>
 
+    <script>
+        // INLINE MATRIX RAIN (Guaranteed Execution)
+        (function() {
+            const canvas = document.getElementById('matrix-rain');
+            if(!canvas) return;
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            const chars = "01XYZAﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ";
+            const fontSize = 14;
+            const columns = Math.floor(window.innerWidth / fontSize);
+            const drops = Array(Math.ceil(columns)).fill(1);
+            const palette = ["#0aff00", "#00f3ff", "#ff0055", "#888888", "#ffffff"];
+            let tick = 0;
+            
+            function draw() {
+                ctx.fillStyle = "rgba(3, 3, 3, 0.08)";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                tick++;
+                const colorIndex = Math.floor(tick / 200) % palette.length;
+                ctx.fillStyle = palette[colorIndex];
+                ctx.font = fontSize + "px monospace";
+                for(let i=0; i<drops.length; i++) {
+                    const text = chars[Math.floor(Math.random()*chars.length)];
+                    ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+                    if(drops[i]*fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                    drops[i]++;
+                }
+            }
+            setInterval(draw, 33);
+            window.addEventListener('resize', () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; });
+        })();
+    </script>
+    
     <script src="js/render.js"></script>
 </body>
 </html>
