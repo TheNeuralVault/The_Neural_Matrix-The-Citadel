@@ -87,7 +87,7 @@ def audit_structure():
                     links = link_pattern.findall(content)
                     for link in links:
                         # Skip external, anchors, mailto, etc.
-                        if link.startswith("http") or link.startswith("#") or link.startswith("mailto"):
+                        if link.startswith("http") or link.startswith("#") or link.startswith("mailto") or "${" in link:
                             continue
                         
                         # Strip query params
