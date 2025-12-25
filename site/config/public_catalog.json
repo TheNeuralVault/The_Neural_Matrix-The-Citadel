@@ -1,0 +1,10 @@
+{
+  "titanium_genesis": {
+    "name": "Titanium Core v1",
+    "description": "The Anti-Framework. A 2KB Logic Engine that kills dependency hell. Pure Vanilla JS.",
+    "metadata": {
+      "vault_id": "titanium_genesis"
+    },
+    "price_url": "https://buy.stripe.com/fZu4gzfFKb6Sbuv9Hl8g02B"
+  }
+}
