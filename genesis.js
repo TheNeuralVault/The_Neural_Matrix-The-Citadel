@@ -1,7 +1,7 @@
 const fs = require('fs');
 const stripe = require('stripe')(process.env.STRIPE_KEY);
 
-const CATALOG_PATH = './site/config/public_catalog.json';
+const CATALOG_PATH = './config/public_catalog.json';
 
 async function ignite() {
     console.log(":: GENESIS PROTOCOL INITIATED ::");
