@@ -3,206 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL MATRIX | THE CITADEL</title>
+    <title>THE CITADEL | NEURAL MATRIX</title>
     <style>
-        /* --- TITANIUM AESTHETIC: GLAMOUR PROTOCOL --- */
-        body {
-            background: #000;
-            color: #0f0;
-            font-family: 'Courier New', monospace;
-            margin: 0;
-            overflow-x: hidden;
-            height: 100vh;
-        }
-
-        /* DYSON SPHERE CANVAS (Background) */
-        canvas {
-            position: fixed;
-            top: 0; left: 0;
-            z-index: -1;
-        }
-
-        /* THE GLASS HUD */
-        .hud {
-            position: fixed;
-            padding: 15px 25px;
-            font-size: 12px;
-            color: #00ffff;
-            background: rgba(0, 20, 20, 0.3);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            backdrop-filter: blur(5px); /* THE BLUR EFFECT */
-            z-index: 100;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            pointer-events: none;
-            box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
-        }
-        .hud-tl { top: 20px; left: 20px; border-left: 3px solid #00ffff; }
-        .hud-tr { top: 20px; right: 20px; text-align: right; border-right: 3px solid #00ffff; }
-
-        /* CINEMATIC HERO */
-        header {
-            text-align: center;
-            padding-top: 20vh;
-            padding-bottom: 50px;
-            background: radial-gradient(circle at center, rgba(0,20,0,0.2), transparent 70%);
-        }
-        h1 {
-            font-size: 4rem;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 10px;
-            color: #fff;
-            text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0; /* FLASHY NEON */
-            animation: pulse 3s infinite;
-        }
-        .tagline {
-            color: #00ffff;
-            letter-spacing: 4px;
-            font-size: 0.9rem;
-            margin-top: 10px;
-            opacity: 0.9;
-        }
-
-        /* THE ARTIFACT GRID */
-        #g {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            padding: 20px 40px 120px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* HIGH-VALUE ARTIFACT CARD */
-        .artifact {
-            background: rgba(0, 10, 0, 0.7); /* DARK GLASS */
-            border: 1px solid rgba(0, 255, 0, 0.3);
-            padding: 40px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            backdrop-filter: blur(10px);
-            position: relative;
-            overflow: hidden;
-        }
-        .artifact::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 2px;
-            background: linear-gradient(90deg, transparent, #0f0, transparent);
-            transform: translateX(-100%);
-            transition: 0.5s;
-        }
-        .artifact:hover {
-            transform: translateY(-10px);
-            border-color: #00ffff;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
-        }
-        .artifact:hover::before { transform: translateX(100%); }
-        
-        .artifact h2 {
-            margin-top: 0;
-            color: #fff;
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-        }
-        .artifact p {
-            color: #aaa;
-            line-height: 1.6;
-            margin-bottom: 30px;
-            font-size: 0.9rem;
-        }
-        
-        /* THE "BUY" BUTTON (High Value Feel) */
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 15px 0;
-            text-align: center;
-            background: transparent;
-            border: 1px solid #0f0;
-            color: #0f0;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            transition: 0.3s;
-            position: relative;
-            z-index: 2;
-        }
-        .btn:hover {
-            background: #0f0;
-            color: #000;
-            box-shadow: 0 0 20px #0f0;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 50px;
-            color: #444;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-        }
-
-        @keyframes pulse {
-            0% { text-shadow: 0 0 10px #0f0, 0 0 20px #0f0; opacity: 1; }
-            50% { text-shadow: 0 0 20px #0f0, 0 0 40px #0f0; opacity: 0.8; }
-            100% { text-shadow: 0 0 10px #0f0, 0 0 20px #0f0; opacity: 1; }
-        }
+        body { background: #020202; color: #00ff00; font-family: 'Courier New', monospace; margin: 0; overflow-x: hidden; }
+        canvas { position: fixed; top: 0; left: 0; z-index: -1; opacity: 0.8; }
+        .hud { position: fixed; padding: 20px; color: #00ffff; border: 1px solid rgba(0,255,255,0.2); backdrop-filter: blur(5px); z-index: 100; }
+        .hud-tl { top: 20px; left: 20px; }
+        header { text-align: center; padding-top: 25vh; }
+        h1 { font-size: 3rem; letter-spacing: 10px; color: #fff; text-shadow: 0 0 20px #0f0; }
+        #g { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 100px 50px; max-width: 1200px; margin: 0 auto; }
+        .artifact { background: rgba(0,20,10,0.6); border: 1px solid rgba(0,255,0,0.3); padding: 30px; backdrop-filter: blur(10px); }
+        .artifact h2 { color: #fff; border-bottom: 1px solid #0f0; padding-bottom: 10px; }
+        .btn { display: block; border: 1px solid #0f0; color: #0f0; padding: 15px; text-align: center; text-decoration: none; margin-top: 20px; transition: 0.3s; }
+        .btn:hover { background: #0f0; color: #000; }
     </style>
 </head>
 <body>
-
-    <div class="hud hud-tl">
-        NEURAL MATRIX<br>
-        SYSTEM: SUPREME
-    </div>
-    <div class="hud hud-tr">
-        ARCHITECT: MAGNUS OPUS<br>
-        STATUS: SOVEREIGN
-    </div>
-
+    <div class="hud hud-tl">SYSTEM: REBOOTED<br>STATUS: SOVEREIGN</div>
     <header>
-        <h1>The Citadel</h1>
-        <div class="tagline">// ARCHITECTING THE IMPOSSIBLE //</div>
+        <h1>THE CITADEL</h1>
+        <div>// WE DO NOT FOLLOW. WE CORRECT. //</div>
     </header>
-
     <div id="g"></div>
+    
+    <script type="module">
+        import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
+        // CELESTIUM ENGINE (Simplified for restoration)
+        const scene = new THREE.Scene();
+        const cam = new THREE.PerspectiveCamera(75, innerWidth/innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({alpha:true});
+        renderer.setSize(innerWidth, innerHeight);
+        document.body.appendChild(renderer.domElement);
+        
+        // Stars
+        const geo = new THREE.BufferGeometry();
+        const pos = [];
+        for(let i=0;i<5000;i++) pos.push((Math.random()-0.5)*1000, (Math.random()-0.5)*1000, (Math.random()-0.5)*1000);
+        geo.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+        const mat = new THREE.PointsMaterial({color: 0x00ff00, size: 2});
+        const stars = new THREE.Points(geo, mat);
+        scene.add(stars);
+        cam.position.z = 500;
 
-    <footer>
-        ⟁ THE NEURAL VAULT <br>
-        LIVING ORGANISM v3.1
-    </footer>
-
-    <script type="module" src="js/celestium.js"></script>
+        function animate() {
+            requestAnimationFrame(animate);
+            stars.rotation.y += 0.002;
+            stars.rotation.x += 0.001;
+            renderer.render(scene, cam);
+        }
+        animate();
+    </script>
 
     <script>
-        class Kernel {
-            constructor() {
-                this.grid = document.getElementById('g');
-                this.boot();
-            }
-            async boot() {
-                try {
-                    let r = await fetch('./config/public_catalog.json?t=' + Date.now());
-                    let catalog = await r.json();
-                    Object.entries(catalog).forEach(([key, item]) => {
-                        let card = document.createElement('div');
-                        card.className = 'artifact';
-                        // Flashy Presentation
-                        card.innerHTML = `
+        fetch('./config/public_catalog.json')
+            .then(r => r.json())
+            .then(data => {
+                const g = document.getElementById('g');
+                Object.values(data).forEach(item => {
+                    g.innerHTML += `
+                        <div class="artifact">
                             <h2>${item.name}</h2>
                             <p>${item.description}</p>
-                            <a href="${item.price_url}" class="btn">ACQUIRE ARTIFACT</a>
-                        `;
-                        this.grid.appendChild(card);
-                    });
-                } catch (e) {
-                    console.log(":: WAITING FOR ARTIFACTS ::");
-                }
-            }
-        }
-        new Kernel();
+                            <a href="${item.price_url}" class="btn">ACQUIRE</a>
+                        </div>
+                    `;
+                });
+            })
+            .catch(e => document.getElementById('g').innerHTML = "<div style='text-align:center'>:: ORACLE SYNCING... ::</div>");
     </script>
 </body>
 </html>

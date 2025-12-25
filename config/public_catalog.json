@@ -6,5 +6,29 @@
       "vault_id": "titanium_genesis"
     },
     "price_url": "https://buy.stripe.com/fZu4gzfFKb6Sbuv9Hl8g02B"
+  },
+  "dependency_hell": {
+    "name": "Sovereign Cure: Dependency Hell",
+    "description": "The definitive cure for dependency hell.",
+    "price_url": "#",
+    "metadata": {
+      "architect": "MAGNUS_OPUS"
+    }
+  },
+  "slow_websites": {
+    "name": "Sovereign Cure: Slow Websites",
+    "description": "The definitive cure for slow websites.",
+    "price_url": "#",
+    "metadata": {
+      "architect": "MAGNUS_OPUS"
+    }
+  },
+  "privacy_violation": {
+    "name": "Sovereign Cure: Privacy Violation",
+    "description": "The definitive cure for privacy violation.",
+    "price_url": "#",
+    "metadata": {
+      "architect": "MAGNUS_OPUS"
+    }
   }
 }
