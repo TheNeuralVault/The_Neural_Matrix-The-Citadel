@@ -1,34 +1,29 @@
 {
   "titanium_genesis": {
-    "name": "Titanium Core v1",
-    "description": "The Anti-Framework. A 2KB Logic Engine that kills dependency hell. Pure Vanilla JS.",
+    "name": "Titanium Genesis",
+    "description": "The First Key to the Citadel.",
+    "price_amount": 2500,
+    "price_url": "https://buy.stripe.com/7sY7sL8dib6SbuvbPt8g001",
+    "category": "CORE",
     "metadata": {
-      "vault_id": "titanium_genesis"
-    },
-    "price_url": "https://buy.stripe.com/fZu4gzfFKb6Sbuv9Hl8g02B"
-  },
-  "dependency_hell": {
-    "name": "Sovereign Cure: Dependency Hell",
-    "description": "The definitive cure for dependency hell.",
-    "price_url": "#",
-    "metadata": {
-      "architect": "MAGNUS_OPUS"
+      "tier": "INITIATED",
+      "gravity": 100,
+      "orbit": "genesis_ring",
+      "epoch": 1,
+      "is_ghost": false
     }
   },
-  "slow_websites": {
-    "name": "Sovereign Cure: Slow Websites",
-    "description": "The definitive cure for slow websites.",
+  "spectral_key": {
+    "name": "Spectral Key",
+    "description": "A one-time artifact. Vanishes upon use.",
+    "price_amount": 5000,
     "price_url": "#",
+    "category": "CIPHER",
     "metadata": {
-      "architect": "MAGNUS_OPUS"
-    }
-  },
-  "privacy_violation": {
-    "name": "Sovereign Cure: Privacy Violation",
-    "description": "The definitive cure for privacy violation.",
-    "price_url": "#",
-    "metadata": {
-      "architect": "MAGNUS_OPUS"
+      "tier": "PUBLIC",
+      "gravity": 50,
+      "is_ghost": true,
+      "consumed": false
     }
   }
 }
