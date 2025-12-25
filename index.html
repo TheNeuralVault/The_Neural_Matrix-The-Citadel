@@ -1,13 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>THE NEURAL MATRIX</title>
-<style>body{background:#020202;color:#0f0;font-family:'Courier New',monospace;margin:0;overflow-x:hidden}.hud{position:fixed;padding:15px;font-size:11px;color:rgba(0,255,0,0.6);z-index:100;pointer-events:none;border:1px solid #0f0}#g{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;padding:120px 20px;z-index:10;position:relative}h1{text-align:center;margin-top:60px;color:#0f0;z-index:10;position:relative}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE CITADEL | NEURAL MATRIX</title>
+    <style>
+        /* --- TITANIUM AESTHETIC --- */
+        body {
+            background: #020202;
+            color: #00ff00; /* TERMINAL GREEN */
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* HUD OVERLAY */
+        .hud {
+            position: fixed;
+            padding: 20px;
+            font-size: 10px;
+            color: rgba(0, 255, 0, 0.5);
+            z-index: 100;
+            pointer-events: none;
+            border: 1px solid rgba(0, 255, 0, 0.2);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .hud-tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+        .hud-tr { top: 20px; right: 20px; text-align: right; border-left: none; border-bottom: none; }
+        .hud-bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+
+        /* HERO SECTION */
+        header {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 15vh 20px 50px;
+            background: linear-gradient(to bottom, transparent, #020202);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+        }
+        .tagline {
+            color: #00ffff; /* CYAN SIGNAL */
+            font-size: 0.9rem;
+            margin-top: 10px;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+
+        /* THE ARTIFACT GRID */
+        #g {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 20px 20px 120px;
+            z-index: 10;
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ARTIFACT CARD (LIVING SYSTEM) */
+        .artifact {
+            border-left: 2px solid #00ffff;
+            background: rgba(0, 20, 20, 0.85);
+            padding: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            backdrop-filter: blur(5px);
+        }
+        .artifact:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+            border-left-color: #00ff00;
+        }
+        .artifact h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        .artifact p {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 25px;
+        }
+        
+        /* ACCESS BUTTON */
+        .btn-access {
+            display: block;
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #00ff00;
+            color: #00ff00;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 3px;
+            transition: 0.2s;
+            text-transform: uppercase;
+        }
+        .btn-access:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        /* SOVEREIGN MARK (FOOTER) */
+        footer {
+            text-align: center;
+            padding: 50px;
+            color: #444;
+            font-size: 0.7rem;
+            z-index: 10;
+            position: relative;
+            letter-spacing: 2px;
+        }
+        .sov-mark {
+            color: #00ff00;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-<div class="hud" style="top:0;left:0">NEURAL MATRIX<br>V 3.1</div>
-<h1>The Citadel</h1>
-<div id="g"></div>
-<script type="module" src="js/celestium.js"></script>
+
+    <div class="hud hud-tl">
+        NEURAL MATRIX<br>
+        SYS.VER.3.1
+    </div>
+    <div class="hud hud-tr">
+        PROTOCOL:<br>
+        SOVEREIGN
+    </div>
+    <div class="hud hud-bl">
+        ARCHITECT:<br>
+        JONATHAN
+    </div>
+
+    <header>
+        <h1>The Citadel</h1>
+        <div class="tagline">// THE VAULT OF THE DIGITAL RONIN</div>
+    </header>
+
+    <div id="g"></div>
+
+    <footer>
+        <span class="sov-mark">⟁</span>
+        FORGED IN THE NEURAL MATRIX<br>
+        NO FRAMEWORKS. NO MASTERS.
+    </footer>
+
+    <script type="module" src="js/celestium.js"></script>
+
+    <script>
+        class Kernel {
+            constructor() {
+                this.grid = document.getElementById('g');
+                this.boot();
+            }
+            async boot() {
+                try {
+                    // Fetch the Catalog DNA
+                    let r = await fetch('./config/public_catalog.json?t=' + Date.now());
+                    let catalog = await r.json();
+                    
+                    // Render Each Artifact
+                    Object.entries(catalog).forEach(([key, item]) => {
+                        let card = document.createElement('div');
+                        card.className = 'artifact';
+                        card.innerHTML = `
+                            <h2>${item.name}</h2>
+                            <p>${item.description}</p>
+                            <a href="${item.price_url}" class="btn-access">ACQUIRE ARTIFACT</a>
+                        `;
+                        this.grid.appendChild(card);
+                    });
+                } catch (e) {
+                    console.error(":: KERNEL PANIC :: Catalog unreachable.");
+                }
+            }
+        }
+        new Kernel();
+    </script>
 </body>
 </html>
