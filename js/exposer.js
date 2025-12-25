@@ -1,15 +1,15 @@
 import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 
 /**
- * MAGNUS OPUS: SOVEREIGN ENGINE v6.0 [VISUAL CORTEX]
- * "The Citadel is not just code; it is a place."
+ * MAGNUS OPUS: SOVEREIGN ENGINE v6.1 [TACTILE ENABLED]
+ * "The Citadel obeys the hand of the Architect."
  */
 
-// PART 1: THE VISUAL CORTEX (3D WORLD)
 class VisualCortex {
     constructor() {
+        // 1. SETUP THE VOID
         this.container = document.createElement('div');
-        this.container.style.cssText = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.6;";
+        this.container.style.cssText = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.6; pointer-events: none;";
         document.body.appendChild(this.container);
         
         this.scene = new THREE.Scene();
@@ -19,6 +19,7 @@ class VisualCortex {
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         this.container.appendChild(this.renderer.domElement);
         
+        // 2. CREATE THE MATRIX (The Sphere)
         this.geometry = new THREE.IcosahedronGeometry(10, 2);
         this.material = new THREE.MeshBasicMaterial({ 
             color: 0x00ff00, 
@@ -31,41 +32,63 @@ class VisualCortex {
         this.scene.add(this.sphere);
         this.camera.position.z = 15;
 
+        // 3. THE NERVOUS SYSTEM (Touch Tracking)
+        this.targetRotationX = 0;
+        this.targetRotationY = 0;
+        this.windowHalfX = window.innerWidth / 2;
+        this.windowHalfY = window.innerHeight / 2;
+
+        document.addEventListener('touchmove', (e) => this.onTouchMove(e), { passive: false });
+        document.addEventListener('mousemove', (e) => this.onMouseMove(e), { passive: false });
+        window.addEventListener('resize', () => this.handleResize());
+
         this.animate();
-        this.handleResize();
+    }
+
+    onTouchMove(event) {
+        // Calculate rotation based on finger position relative to center
+        this.targetRotationX = (event.touches[0].clientY - this.windowHalfY) * 0.001;
+        this.targetRotationY = (event.touches[0].clientX - this.windowHalfX) * 0.001;
+    }
+
+    onMouseMove(event) {
+        // PC support for testing
+        this.targetRotationX = (event.clientY - this.windowHalfY) * 0.001;
+        this.targetRotationY = (event.clientX - this.windowHalfX) * 0.001;
     }
 
     animate() {
         requestAnimationFrame(() => this.animate());
-        // The "Breathing" Rotation
-        this.sphere.rotation.x += 0.001;
-        this.sphere.rotation.y += 0.002;
+        
+        // PHYSICS: Smoothly blend current rotation into target rotation (Inertia)
+        this.sphere.rotation.x += 0.05 * (this.targetRotationX - this.sphere.rotation.x) + 0.001; // +0.001 keeps it breathing
+        this.sphere.rotation.y += 0.05 * (this.targetRotationY - this.sphere.rotation.y) + 0.002;
+
         this.renderer.render(this.scene, this.camera);
     }
 
     pulse() {
-        // Visual confirmation of System Sync
         this.material.opacity = 1;
         setTimeout(() => { this.material.opacity = 0.3; }, 500);
     }
 
     handleResize() {
-        window.addEventListener('resize', () => {
-            this.camera.aspect = window.innerWidth / window.innerHeight;
-            this.camera.updateProjectionMatrix();
-            this.renderer.setSize(window.innerWidth, window.innerHeight);
-        });
+        this.windowHalfX = window.innerWidth / 2;
+        this.windowHalfY = window.innerHeight / 2;
+        this.camera.aspect = window.innerWidth / window.innerHeight;
+        this.camera.updateProjectionMatrix();
+        this.renderer.setSize(window.innerWidth, window.innerHeight);
     }
 }
 
-// PART 2: THE SOVEREIGN KERNEL (LOGIC)
+// LOGIC KERNEL (Unchanged)
 class SovereignEngine {
     constructor() {
         this.source = './config/public_catalog.json';
         this.root = document.getElementById('vault-grid');
         this.memory = null; 
         this.pulseRate = 60000; 
-        this.visuals = new VisualCortex(); // Ignite the 3D World
+        this.visuals = new VisualCortex(); 
         this.userClearance = this.checkClearance();
     }
 
@@ -77,23 +100,20 @@ class SovereignEngine {
     }
 
     startHeartbeat() {
-        setInterval(async () => {
-            await this.sync();
-        }, this.pulseRate);
+        setInterval(async () => { await this.sync(); }, this.pulseRate);
     }
 
     async sync() {
         try {
             const response = await fetch(`${this.source}?t=${Date.now()}`);
             if (!response.ok) throw new Error("Signal Lost");
-            
             const newData = await response.json();
             
             if (JSON.stringify(newData) !== JSON.stringify(this.memory)) {
                 this.memory = newData;
                 this.manifestReality(newData);
                 this.flashStatus(":: SYSTEM UPDATE SYNCED ::", "#00ff00");
-                this.visuals.pulse(); // Trigger 3D Effect
+                this.visuals.pulse();
             }
         } catch (err) {
             console.warn(":: CONNECTION UNSTABLE ::", err);
@@ -118,7 +138,6 @@ class SovereignEngine {
 
             const card = document.createElement('div');
             card.className = 'artifact-card';
-            // Glassmorphism Style for 3D visibility
             card.style.cssText = `
                 border: 1px solid ${data.metadata?.tier === 'BLACK' ? '#ff00ff' : '#00ff00'};
                 padding: 20px; margin: 10px; 
@@ -167,6 +186,5 @@ class SovereignEngine {
     }
 }
 
-// INITIATE MODULE
 const Engine = new SovereignEngine();
 Engine.ignite();
