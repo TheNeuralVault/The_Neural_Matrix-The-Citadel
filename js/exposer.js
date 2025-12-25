@@ -1,13 +1,12 @@
 import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 
 /**
- * MAGNUS OPUS: SOVEREIGN ENGINE v6.1 [RESTORED]
- * 3D VISUALS + TOUCH CONTROL + LOGIC KERNEL
+ * MAGNUS OPUS: SOVEREIGN ENGINE v6.3 [VERIFIED TACTILE]
+ * "The Matrix is Alive, Responsive, and Verified."
  */
 
 class VisualCortex {
     constructor() {
-        // 1. SETUP THE VOID
         this.container = document.createElement('div');
         this.container.style.cssText = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.6; pointer-events: none;";
         document.body.appendChild(this.container);
@@ -19,7 +18,7 @@ class VisualCortex {
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         this.container.appendChild(this.renderer.domElement);
         
-        // 2. THE MATRIX SPHERE
+        // THE SPHERE
         this.geometry = new THREE.IcosahedronGeometry(10, 2);
         this.material = new THREE.MeshBasicMaterial({ 
             color: 0x00ff00, 
@@ -32,7 +31,7 @@ class VisualCortex {
         this.scene.add(this.sphere);
         this.camera.position.z = 15;
 
-        // 3. TOUCH & MOUSE TRACKING
+        // TOUCH CONTROLS
         this.targetRotationX = 0;
         this.targetRotationY = 0;
         this.windowHalfX = window.innerWidth / 2;
@@ -57,7 +56,6 @@ class VisualCortex {
 
     animate() {
         requestAnimationFrame(() => this.animate());
-        // Physics: Smooth drag
         this.sphere.rotation.x += 0.05 * (this.targetRotationX - this.sphere.rotation.x) + 0.001;
         this.sphere.rotation.y += 0.05 * (this.targetRotationY - this.sphere.rotation.y) + 0.002;
         this.renderer.render(this.scene, this.camera);
@@ -80,8 +78,35 @@ class SovereignEngine {
     }
 
     async ignite() {
-        console.log(":: SOVEREIGN ENGINE: ONLINE ::");
+        console.log(":: SOVEREIGN ENGINE v6.3: ONLINE ::");
+        this.flashVerification(); // TRIGGER THE TEXT
         await this.sync();
+    }
+
+    flashVerification() {
+        const sign = document.createElement('div');
+        sign.innerHTML = "VERIFIED";
+        sign.style.cssText = `
+            position: fixed; 
+            top: 50%; left: 50%; 
+            transform: translate(-50%, -50%); 
+            color: #ff0000; 
+            font-size: 15vw; 
+            font-family: monospace; 
+            font-weight: 900; 
+            z-index: 9999; 
+            pointer-events: none;
+            text-shadow: 0 0 20px #ff0000;
+            border: 5px solid #ff0000;
+            padding: 20px;
+            background: rgba(0,0,0,0.8);
+        `;
+        document.body.appendChild(sign);
+
+        // BLINK EFFECT
+        setInterval(() => {
+            sign.style.visibility = (sign.style.visibility === 'hidden' ? 'visible' : 'hidden');
+        }, 800);
     }
 
     async sync() {
@@ -91,7 +116,7 @@ class SovereignEngine {
             const catalog = await response.json();
             this.manifestReality(catalog);
         } catch (err) {
-            console.log(":: CATALOG EMPTY - 3D BACKGROUND ACTIVE ::");
+            console.log(":: CATALOG EMPTY - ENGINE RUNNING ::");
         }
     }
 
@@ -101,7 +126,6 @@ class SovereignEngine {
         Object.entries(catalog).forEach(([id, data]) => {
             const card = document.createElement('div');
             card.className = 'artifact-card';
-            // Glassmorphism for 3D visibility
             card.style.cssText = `
                 border: 1px solid #00ff00; padding: 20px; margin: 10px; 
                 background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px);
