@@ -1,8 +1,8 @@
 import * as THREE from 'https://unpkg.com/three@0.160.0/build/three.module.js';
 
 /**
- * MAGNUS OPUS: SOVEREIGN ENGINE v6.3 [VERIFIED TACTILE]
- * "The Matrix is Alive, Responsive, and Verified."
+ * MAGNUS OPUS: SOVEREIGN ENGINE v6.4 [PRODUCTION]
+ * "The Stage is Set. The Shelves Await."
  */
 
 class VisualCortex {
@@ -18,7 +18,6 @@ class VisualCortex {
         this.renderer.setSize(window.innerWidth, window.innerHeight);
         this.container.appendChild(this.renderer.domElement);
         
-        // THE SPHERE
         this.geometry = new THREE.IcosahedronGeometry(10, 2);
         this.material = new THREE.MeshBasicMaterial({ 
             color: 0x00ff00, 
@@ -31,7 +30,6 @@ class VisualCortex {
         this.scene.add(this.sphere);
         this.camera.position.z = 15;
 
-        // TOUCH CONTROLS
         this.targetRotationX = 0;
         this.targetRotationY = 0;
         this.windowHalfX = window.innerWidth / 2;
@@ -74,39 +72,12 @@ class SovereignEngine {
     constructor() {
         this.source = './config/public_catalog.json';
         this.root = document.getElementById('vault-grid');
-        this.visuals = new VisualCortex(); // Ignite 3D
+        this.visuals = new VisualCortex();
     }
 
     async ignite() {
-        console.log(":: SOVEREIGN ENGINE v6.3: ONLINE ::");
-        this.flashVerification(); // TRIGGER THE TEXT
+        console.log(":: SOVEREIGN ENGINE: PRODUCTION MODE ::");
         await this.sync();
-    }
-
-    flashVerification() {
-        const sign = document.createElement('div');
-        sign.innerHTML = "VERIFIED";
-        sign.style.cssText = `
-            position: fixed; 
-            top: 50%; left: 50%; 
-            transform: translate(-50%, -50%); 
-            color: #ff0000; 
-            font-size: 15vw; 
-            font-family: monospace; 
-            font-weight: 900; 
-            z-index: 9999; 
-            pointer-events: none;
-            text-shadow: 0 0 20px #ff0000;
-            border: 5px solid #ff0000;
-            padding: 20px;
-            background: rgba(0,0,0,0.8);
-        `;
-        document.body.appendChild(sign);
-
-        // BLINK EFFECT
-        setInterval(() => {
-            sign.style.visibility = (sign.style.visibility === 'hidden' ? 'visible' : 'hidden');
-        }, 800);
     }
 
     async sync() {
@@ -116,7 +87,8 @@ class SovereignEngine {
             const catalog = await response.json();
             this.manifestReality(catalog);
         } catch (err) {
-            console.log(":: CATALOG EMPTY - ENGINE RUNNING ::");
+            console.log(":: WAITING FOR ARTIFACTS ::");
+            if (this.root) this.root.innerHTML = '<h3 style="text-align:center; margin-top: 20%; color: #004400;">:: AWAITING INPUT ::</h3>';
         }
     }
 
@@ -124,13 +96,27 @@ class SovereignEngine {
         if (!this.root) return;
         this.root.innerHTML = ''; 
         Object.entries(catalog).forEach(([id, data]) => {
+            if (!data.name || !data.price_url) return; 
+
             const card = document.createElement('div');
             card.className = 'artifact-card';
             card.style.cssText = `
                 border: 1px solid #00ff00; padding: 20px; margin: 10px; 
                 background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px);
+                border-radius: 4px; transition: transform 0.1s;
             `;
-            card.innerHTML = `<h3>${data.name}</h3>`;
+            
+            card.innerHTML = `
+                <div style="font-size: 0.6rem; color: #555; letter-spacing: 2px; margin-bottom: 5px;">ID: ${id.toUpperCase()}</div>
+                <h3 style="color: #00ff00; margin: 0 0 10px 0;">${data.name}</h3>
+                <p style="color: #ccc; font-size: 0.9rem;">${data.description || 'Classified Data'}</p>
+                <a href="${data.price_url}" style="
+                    display: block; margin-top: 15px; padding: 12px;
+                    background: #00ff00; color: #000; text-align: center; 
+                    text-decoration: none; font-weight: bold;
+                    text-transform: uppercase; letter-spacing: 1px;
+                ">AWAKEN</a>
+            `;
             this.root.appendChild(card);
         });
     }
