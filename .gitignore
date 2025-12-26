@@ -1,0 +1,8 @@
+# PRIVATE ENGINE SHIELD
+engine/
+agents/
+logs/
+scripts/
+vault_control.html
+config/keys.json
+.env
