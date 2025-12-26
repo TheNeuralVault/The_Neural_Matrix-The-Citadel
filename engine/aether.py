@@ -3,14 +3,16 @@ import os
 import time
 import logging
 
-# PATH FINDER: ENSURE AGENTS ARE VISIBLE
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# SOVEREIGN PATH INJECTION
+# This ensures agents/ is visible even when running from engine/
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 try:
     from agents.warden import Warden
     from agents.chronicler import Chronicler
 except ImportError as e:
     print(f":: ERROR: AGENTS NOT FOUND :: {e}")
+    print(f"Current Path: {sys.path}")
     sys.exit(1)
 
 # INITIALIZE SOVEREIGN LOGS
@@ -25,14 +27,9 @@ class AetherEngine:
         self.is_active = True
 
     def pulse(self):
-        logging.info("Aether Engine Pulse: Analyzing Realms...")
         print(":: ENGINE PULSE :: Analyzing Realms...")
-        
-        # 1. Warden Audit
         if self.warden.scan_integrity():
             print("   >> Warden: Integrity Verified.")
-            
-            # 2. Chronicler Manifestation
             if self.chronicler.check_pending_updates():
                 self.chronicler.manifest_to_public()
             else:
