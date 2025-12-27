@@ -1,0 +1,5 @@
+{
+    "weights": { "impact": 1.5, "sovereignty": 1.3, "friction": 0.8 },
+    "thresholds": { "hero_tier": 8.5, "standard_tier": 5.0, "deprecation": 2.0 },
+    "signature": "Jonathan Battles, Pioneer, Visionary"
+}
