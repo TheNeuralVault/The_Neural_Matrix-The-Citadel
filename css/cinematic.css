@@ -1,10 +1,10 @@
 /* NEURAL MATRIX // CINEMATIC UX CSS */
 .lore-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.1); opacity: 0; transition: opacity 0.3s ease; display: flex; align-items: center; justify-content: center; pointer-events: none; z-index: 10; }
-.lore-text { font-family: var(--font-mono); font-size: 0.9rem; color: var(--theme); text-align: center; padding: 20px; line-height: 1.4; text-shadow: 0 0 10px var(--theme); }
+.lore-text { font-family: 'Space Mono', monospace; font-size: 0.9rem; color: var(--cyan, #00f3ff); text-align: center; padding: 20px; line-height: 1.4; text-shadow: 0 0 10px var(--cyan, #00f3ff); }
 .transition-veil { position: fixed; inset: 0; background: #000; opacity: 0; transition: opacity 0.4s ease; z-index: 9999; pointer-events: none; }
 .distortion-field { position: absolute; width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%); mix-blend-mode: overlay; filter: blur(25px); pointer-events: none; transform: translate(-9999px, -9999px); transition: transform 0.05s linear; z-index: 20; }
 .glyph-loader { position: fixed; inset: 0; background: #050505; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; z-index: 99999; }
-.glyph-pattern { font-family: var(--font-mono); font-size: 1.2rem; color: var(--theme); line-height: 1.2; text-align: center; white-space: pre; text-shadow: 0 0 12px var(--theme); }
+.glyph-pattern { font-family: 'Space Mono', monospace; font-size: 1.2rem; color: var(--cyan, #00f3ff); line-height: 1.2; text-align: center; white-space: pre; text-shadow: 0 0 12px var(--cyan, #00f3ff); }
 .glitching { animation: glitch-flicker 0.2s linear infinite; }
 @keyframes glitch-flicker { 0% { opacity: 1; } 20% { opacity: 0.4; } 40% { opacity: 1; } 60% { opacity: 0.6; } 80% { opacity: 1; } 100% { opacity: 0.9; } }
 .webgpu-canvas { width: 100%; height: 100%; display: block; }
