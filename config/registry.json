@@ -1,22 +1,27 @@
+cat << 'JSON' > config/registry.json
 {
   "products": [
     {
       "id": "ARTIFACT-001",
       "name": "THE SENTINEL",
-      "price": "49",
-      "sector": "pro",
-      "tags": ["SEO", "BOT"],
-      "description": "Autonomous SEO auditing agent.",
+      "description": "Autonomous SEO auditing agent. Detects weaknesses in digital structures.",
+      "price": 49,
+      "sector": "DOMINION",
+      "specs": "Python // SEO // Audit",
+      "friction": 0.5,
       "stripe_link": "#"
     },
     {
       "id": "ARTIFACT-002",
       "name": "TITANIUM GLASS",
-      "price": "29",
-      "sector": "visuals",
-      "tags": ["UI", "CSS"],
-      "description": "High-frequency Glassmorphism kit.",
+      "description": "High-frequency Glassmorphism UI kit. CSS architecture for the Citadel.",
+      "price": 29,
+      "sector": "CITADEL",
+      "specs": "CSS3 // Glass // Titanium",
+      "friction": 0.2,
       "stripe_link": "#"
     }
   ]
 }
+JSON
+

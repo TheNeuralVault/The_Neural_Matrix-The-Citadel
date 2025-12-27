@@ -1,0 +1,10 @@
+{
+    "weights": { "impact": 1.5, "sovereignty": 1.4, "friction": 0.9 },
+    "multipliers": { "DOMINION": 1.5, "FOUNDRY": 1.3, "CITADEL": 1.0 },
+    "curve": { "midpoint": 5.0, "steepness": 0.5 },
+    "tiers": {
+        "BLACK": { "min": 9.0, "hex": "#ff00ff", "label": "RESTRICTED" },
+        "HERO":  { "min": 7.5, "hex": "#00f3ff", "label": "VANGUARD" },
+        "STANDARD": { "min": 0.0, "hex": "#ffffff", "label": "CITIZEN" }
+    }
+}
