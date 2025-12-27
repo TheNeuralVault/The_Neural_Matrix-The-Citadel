@@ -1,85 +1,104 @@
 :root {
     --cyan: #00f3ff;
-    --amber: #ffb300;
-    --glass: rgba(0, 0, 0, 0.75);
-    --border: rgba(255, 255, 255, 0.1);
+    --purple: #bc13fe;
+    --gold: #ffb300;
+    --glass: rgba(0, 0, 0, 0.6); 
+    --border: rgba(255, 255, 255, 0.15);
 }
 
 body {
     margin: 0; padding: 0;
-    background: #000;
+    background-color: #000;
     color: #fff;
     font-family: 'Space Mono', monospace;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Prevent body scroll, handle rail separately */
 }
 
-/* THE DYSON ANCHOR */
+/* UNIVERSAL DYSON BACKGROUND */
 body::before {
     content: "";
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
+    /* Ensure this path matches where you put the file */
     background: url('../assets/dyson_sphere.jpg') no-repeat center center;
     background-size: cover;
-    opacity: 0.3;
+    opacity: 0.4; /* Visible but allows text to be read */
     z-index: -2;
-    filter: brightness(0.5) contrast(1.1);
+    filter: contrast(1.2) brightness(0.6);
 }
 
-#matrix-rain {
+/* GLOBAL TOP NAVIGATION RAIL */
+.sector-rail-wrapper {
     position: fixed;
     top: 0; left: 0;
-    z-index: -1;
-    opacity: 0.15;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    border-bottom: 1px solid var(--cyan);
+    z-index: 1000;
+    padding: 10px 0;
+    overflow-x: auto; /* Enables horizontal scroll */
+    white-space: nowrap;
+}
+
+.sector-rail {
+    display: inline-flex;
+    padding: 0 20px;
+    gap: 15px;
+}
+
+.nav-item {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: var(--cyan);
+    border: 1px solid var(--cyan);
+    background: rgba(0, 243, 255, 0.1);
+    box-shadow: 0 0 10px var(--cyan);
+}
+
+/* CONTENT CONTAINER */
+.main-content {
+    margin-top: 100px; /* Push content down below the nav bar */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
 }
 
 .glass-panel {
     background: var(--glass);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     border: 1px solid var(--border);
-    padding: 3rem;
-    border-radius: 4px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
 }
 
 .mega-title {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(2rem, 8vw, 5rem);
+    font-size: 3rem;
+    margin-bottom: 10px;
     letter-spacing: -2px;
-    margin: 0;
 }
 
-.mega-title span { color: var(--cyan); }
+.text-cyan { color: var(--cyan); }
+.text-purple { color: var(--purple); }
+.text-gold { color: var(--gold); }
 
-.sector-rail {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 30px 0;
-    justify-content: center;
-}
-
-.rail-item {
-    padding: 8px 15px;
-    border: 1px solid var(--border);
-    font-size: 0.7rem;
-    text-decoration: none;
-    color: #888;
-    transition: 0.3s;
-}
-
-.rail-item:hover, .rail-item.active {
-    color: var(--cyan);
-    border-color: var(--cyan);
-    background: rgba(0, 243, 255, 0.05);
-}
-
-.cta-primary {
-    display: inline-block;
-    padding: 15px 40px;
-    background: var(--cyan);
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .mega-title { font-size: 2rem; }
+    .glass-panel { padding: 20px; }
 }
