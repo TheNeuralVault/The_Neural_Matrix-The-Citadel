@@ -1,104 +1,179 @@
 :root {
     --cyan: #00f3ff;
-    --purple: #bc13fe;
     --gold: #ffb300;
-    --glass: rgba(0, 0, 0, 0.6); 
-    --border: rgba(255, 255, 255, 0.15);
+    --purple: #bc13fe;
+    --glass: rgba(0, 0, 0, 0.6);
+    --border: rgba(255, 255, 255, 0.1);
+    --bg-dark: #050505;
 }
 
 body {
     margin: 0; padding: 0;
-    background-color: #000;
+    background-color: var(--bg-dark);
     color: #fff;
     font-family: 'Space Mono', monospace;
-    overflow-x: hidden; /* Prevent body scroll, handle rail separately */
+    overflow-x: hidden;
 }
 
-/* UNIVERSAL DYSON BACKGROUND */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    /* Ensure this path matches where you put the file */
-    background: url('../assets/dyson_sphere.jpg') no-repeat center center;
-    background-size: cover;
-    opacity: 0.4; /* Visible but allows text to be read */
-    z-index: -2;
-    filter: contrast(1.2) brightness(0.6);
-}
-
-/* GLOBAL TOP NAVIGATION RAIL */
+/* --- 1. GLOBAL NAVIGATION RAIL (FIXED TOP) --- */
 .sector-rail-wrapper {
     position: fixed;
     top: 0; left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.9);
-    border-bottom: 1px solid var(--cyan);
-    z-index: 1000;
-    padding: 10px 0;
-    overflow-x: auto; /* Enables horizontal scroll */
+    background: rgba(0,0,0,0.95);
+    border-bottom: 1px solid var(--border);
+    z-index: 2000;
+    padding: 12px 0;
     white-space: nowrap;
+    overflow-x: auto;
 }
 
 .sector-rail {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     padding: 0 20px;
-    gap: 15px;
 }
 
 .nav-item {
     color: #888;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: bold;
-    padding: 8px 12px;
+    padding: 6px 12px;
     border: 1px solid transparent;
-    transition: 0.3s;
+    transition: all 0.3s ease;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav-item:hover, .nav-item.active {
     color: var(--cyan);
-    border: 1px solid var(--cyan);
+    border-color: var(--cyan);
     background: rgba(0, 243, 255, 0.1);
-    box-shadow: 0 0 10px var(--cyan);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.2);
 }
 
-/* CONTENT CONTAINER */
-.main-content {
-    margin-top: 100px; /* Push content down below the nav bar */
-    padding: 20px;
+/* --- 2. THE DYSON SPHERE REACTOR (CSS 3D) --- */
+.hero-stage {
+    position: relative;
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    overflow: hidden;
+    perspective: 1000px;
 }
 
-.glass-panel {
-    background: var(--glass);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border);
-    padding: 40px;
-    max-width: 800px;
-    width: 100%;
+.dyson-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    z-index: 10;
+}
+
+/* Energy Rings */
+.ring {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid transparent;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+}
+
+.ring-outer {
+    width: 400px; height: 400px;
+    border-top: 2px solid var(--cyan);
+    border-right: 2px solid rgba(0, 243, 255, 0.3);
+    animation: spin 12s linear infinite;
+}
+
+.ring-inner {
+    width: 320px; height: 320px;
+    border-bottom: 2px solid var(--gold);
+    border-left: 2px solid rgba(255, 179, 0, 0.3);
+    box-shadow: 0 0 30px rgba(255, 179, 0, 0.2);
+    animation: spin-rev 8s linear infinite;
+}
+
+.ring-core {
+    width: 280px; height: 280px;
+    border: 1px dashed var(--cyan);
+    opacity: 0.5;
+    animation: spin 20s linear infinite;
+}
+
+/* Geometric Core */
+.poly-core {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100px; height: 100px;
+    margin-left: -50px; margin-top: -50px;
+    transform-style: preserve-3d;
+    animation: rotate3d 10s linear infinite;
+}
+
+.face {
+    position: absolute;
+    width: 100px; height: 100px;
+    background: rgba(0, 243, 255, 0.05);
+    border: 1px solid var(--cyan);
+    box-shadow: inset 0 0 20px rgba(0, 243, 255, 0.1);
+}
+
+.f1 { transform: translateZ(50px); }
+.f2 { transform: rotateY(90deg) translateZ(50px); }
+.f3 { transform: rotateY(180deg) translateZ(50px); }
+.f4 { transform: rotateY(-90deg) translateZ(50px); }
+.f5 { transform: rotateX(90deg) translateZ(50px); }
+.f6 { transform: rotateX(-90deg) translateZ(50px); }
+
+/* --- 3. UI OVERLAYS --- */
+.hero-content {
+    position: absolute;
+    bottom: 10%;
     text-align: center;
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    z-index: 100;
 }
 
 .mega-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
     letter-spacing: -2px;
+    margin: 0;
+    text-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
 }
 
-.text-cyan { color: var(--cyan); }
-.text-purple { color: var(--purple); }
-.text-gold { color: var(--gold); }
+.mega-title span { color: var(--gold); }
 
-/* RESPONSIVE */
+.creed {
+    color: #aaa;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.scanlines {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.2));
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 900;
+}
+
+@keyframes spin { 0% { transform: translate(-50%, -50%) rotate(0deg); } 100% { transform: translate(-50%, -50%) rotate(360deg); } }
+@keyframes spin-rev { 0% { transform: translate(-50%, -50%) rotate(360deg); } 100% { transform: translate(-50%, -50%) rotate(0deg); } }
+@keyframes rotate3d { 0% { transform: rotateX(0) rotateY(0); } 100% { transform: rotateX(360deg) rotateY(360deg); } }
+
+/* Mobile Adjustments */
 @media (max-width: 600px) {
-    .mega-title { font-size: 2rem; }
-    .glass-panel { padding: 20px; }
+    .sector-rail { justify-content: flex-start; } /* Allow scroll */
+    .ring-outer { width: 300px; height: 300px; }
+    .ring-inner { width: 240px; height: 240px; }
+    .mega-title { font-size: 2.5rem; }
 }
