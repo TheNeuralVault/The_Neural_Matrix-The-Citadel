@@ -59,3 +59,14 @@ Generate these initial products:
 
 **SIGNED:**
 **JONATHAN BATTLES (THE ARCHITECT)**
+
+## 9. PROJECT EREBUS (Active Defense)
+- **Anti-Theft:** The JS Engine must check `window.location`.
+- **The Melt:** If domain != `neuralmatrixvault.com` OR `localhost`, inject CSS: `body { filter: grayscale(100%) blur(20px); pointer-events: none; }`.
+- **The Message:** Display overlay: "UNAUTHORIZED HOST. RETURN TO THE CITADEL."
+
+## 10. THE HIDDEN LAYERS (Easter Eggs & Mobile)
+- **Konami Code:** (Up, Up, Down, Down...) triggers "God Mode" (Matrix Rain intensity increases + Neon Green Fireworks).
+- **Mobile Datapad:** On mobile devices, the Nav Bar moves to the bottom (Thumb Zone) and buttons provide haptic feedback (vibration) via the Vibrate API.
+
+**END OF COMPLETE MANIFEST**
