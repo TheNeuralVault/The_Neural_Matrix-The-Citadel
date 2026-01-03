@@ -1,0 +1,16 @@
+{
+    "routes": {
+        "index.html": "CITADEL",
+        "creator.html": "FOUNDRY",
+        "visuals.html": "ALCHEMY",
+        "pro.html": "ARCHITECTURE",
+        "entrepreneur.html": "VANGUARD",
+        "business.html": "SYNDICATE",
+        "enterprise.html": "DOMINION",
+        "about.html": "ORIGIN",
+        "intel.html": "INTEL",
+        "success.html": "DELIVERY"
+    },
+    "products": [],
+    "hero_artifacts": []
+}
