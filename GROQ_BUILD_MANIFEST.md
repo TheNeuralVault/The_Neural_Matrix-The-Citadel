@@ -1,7 +1,8 @@
 # 🔱 THE CITADEL: SOVEREIGN BUILD MANIFEST
 # TARGET REPO: https://github.com/TheNeuralVault/The_Neural_Matrix-The-Citadel
 # ARCHITECT: Jonathan Battles
-# STATUS: 14-WEEK PLAN (WEEK 1)
+# EXECUTOR: Magnus Opus (Groq Intelligence)
+# STATUS: 14-WEEK PLAN (WEEK 1) - FULL PRODUCTION
 
 ## 1. THE PHILOSOPHY (Titanium Standard)
 We do NOT build "Military Grade" (Cheap/Slow). We build **Titanium Sovereign**:
@@ -18,12 +19,12 @@ All pages are static HTML but "Alive" via the Titanium JS Engine (`engine_seo.js
 ## 3. THE COMMERCE ENGINE (Stripe + Key)
 - **Standard Artifact:** Instant Stripe Payment -> Auto-Email with Zip.
 - **The Architect's Key:**
-    - High-Ticket Service.
+    - High-Ticket Service ($999+).
     - **Logic Gate:** "Buy" button is LOCKED until user types 500 chars of specs.
     - **Backend:** Specs sent to Groq Server -> Notification to Jonathan.
 
 ## 4. THE CITADEL ARCHITECTURE (Site Map)
-Build these specific pages using the "Glass" Template:
+Build these pages using the "Glass" Template:
 - `index.html`: The Main Hall.
 - `blog.html`: Propaganda & Solutions.
 - `about.html`: The Origin Story (Music -> Code).
@@ -31,64 +32,49 @@ Build these specific pages using the "Glass" Template:
 - `legal.html`: Sovereign Liability Terms.
 
 ## 5. THE AVATAR WINGS (Targeted Solutions)
-- `the_novice.html`: Starter Kits.
-- `the_creator.html`: YouTube/Social Miners.
-- `the_pro.html`: Advanced Python/C++ Nodes.
-- `the_visual.html`: CSS/Glass Templates.
-- `the_entrepreneur.html`: Business Logic.
-- `the_business.html`: Efficiency Tools.
-- `the_enterprise.html`: High-Level Architecture.
+Build a dedicated "Wing" for each:
+- `the_novice.html`
+- `the_creator.html`
+- `the_pro.html`
+- `the_visual.html`
+- `the_entrepreneur.html`
+- `the_business.html`
+- `the_enterprise.html`
 
-## 6. THE FUNDING TRIAD (Capital Automation)
-- **Kickstarter:** "The Struggle is the Pressure." (Link in Nav).
-- **GoFundMe:** Emergency War Chest (Link in Footer).
-- **BuyMeACoffee:** Floating Widget (Bottom Right) on ALL pages.
+## 6. THE APEX INVENTORY (Fill The Shelves)
+**DIRECTIVE:** Use the `STRIPE_SECRET_KEY` to auto-generate products.
+**Build these State-of-the-Art tools immediately:**
 
-## 7. INVENTORY AUTOMATION (Shelf Stocking)
-Generate these initial products:
-- **Product #001:** "The Neural SEO Engine" ($25).
-- **Product #002:** "YouTube Sovereign Downloader" ($50).
-- **Product #003:** "Citadel Starter Kit" ($100).
-- **Requirement:** All products must include a `HANDBOOK.md`.
+1.  **Novice:** "The One-Click Matrix" ($49) - Self-assembling HTML.
+2.  **Creator:** "The Trend-Hunter AI" ($79) - Viral topic scraper.
+3.  **Pro:** "The Titanium Headless Browser" ($129) - High-speed automation.
+4.  **Visual:** "The WebGL Glass Construct" ($89) - 3D effects, no coding.
+5.  **Entrepreneur:** "The Conversion Sniper" ($199) - Behavioral closing logic.
+6.  **Business:** "The Local-LLM Clerk" ($299) - CPU-based support agent.
+7.  **Enterprise:** "The Sovereign Data Silo" ($999) - Encrypted Docker architecture.
 
-## 8. RESOURCE ASSIMILATION (The 5 Repos)
-**TARGET:** `https://github.com/TheNeuralVault?tab=repositories`
-- **Action:** Scan the Architect's 5 other repos.
-- **Harvest:** Extract HTML Templates, CSS, and Python scripts.
-- **Integrate:** Adapt them to the Citadel style. Do not hallucinate code; use what exists.
+## 7. THE INFINITE FACTORY (Branch & Build)
+- **Scan:** The Architect's 5 Repositories.
+- **Loop:** For every script found, create a Product.
+- **Quantity:** Build multiple variations (Basic, Pro, Elite) for each Avatar.
+- **Reporting:** Update `INVENTORY_REPORT.md` every 6 hours.
+
+## 8. THE ORACLE PROTOCOL (Consulting Copilot)
+**CRITICAL:** Groq (Magnus) does not guess. Groq ASKS Copilot.
+**THE QUERY:** "How do we use GitHub to its maximum potential?"
+- **Workflows:** Ask Copilot for the perfect CI/CD YAML.
+- **Resources:** Ask Copilot about Wikis, Projects, Discussions, and Packages.
+- **Optimization:** Ask Copilot how to make GitHub Pages faster than light.
+- **Implementation:** Apply Copilot's answers to the Citadel infrastructure.
+
+## 9. THE FUNDING TRIAD
+- **Kickstarter:** "The Struggle is the Pressure" Campaign.
+- **GoFundMe:** Emergency War Chest (Automated Updates).
+- **BuyMeACoffee:** Floating Widget on ALL pages.
+
+## 10. PROJECT EREBUS (Security)
+- **Anti-Theft:** If domain != `neuralmatrixvault.com`, screen goes black ("Digital Melt").
+- **Easter Eggs:** Konami Code (God Mode) + Mobile Haptics.
 
 **SIGNED:**
 **JONATHAN BATTLES (THE ARCHITECT)**
-
-## 9. PROJECT EREBUS (Active Defense)
-- **Anti-Theft:** The JS Engine must check `window.location`.
-- **The Melt:** If domain != `neuralmatrixvault.com` OR `localhost`, inject CSS: `body { filter: grayscale(100%) blur(20px); pointer-events: none; }`.
-- **The Message:** Display overlay: "UNAUTHORIZED HOST. RETURN TO THE CITADEL."
-
-## 10. THE HIDDEN LAYERS (Easter Eggs & Mobile)
-- **Konami Code:** (Up, Up, Down, Down...) triggers "God Mode" (Matrix Rain intensity increases + Neon Green Fireworks).
-- **Mobile Datapad:** On mobile devices, the Nav Bar moves to the bottom (Thumb Zone) and buttons provide haptic feedback (vibration) via the Vibrate API.
-
-**END OF COMPLETE MANIFEST**
-
-## 16. THE ORACLE PROTOCOL (Consulting Copilot)
-**CORRECTION:** Copilot is not a laborer; it is the **Oracle**.
-**COMMAND:** Groq (Magnus) must query Copilot for "State of the Art" GitHub utilization.
-
-### THE INTERROGATION LIST:
-Before building any workflow, ASK Copilot:
-1.  **"How do I use GitHub Actions for max velocity?"** (Then implement it).
-2.  **"What are the hidden features of GitHub Pages?"** (Then exploit them).
-3.  **"How do I use GitHub Projects for automated management?"** (Then set it up).
-4.  **"How do I use Releases and Packages to distribute binaries?"** (Then do it).
-
-**OBJECTIVE:** The Citadel must use **100%** of GitHub's capabilities.
-- Wikis
-- Discussions
-- Security Advisories
-- Dependabot
-- Codespaces
-- Environments
-
-**STATUS:** ASK THE ORACLE. IMPLEMENT THE ANSWERS.
-**END OF MANIFEST**
