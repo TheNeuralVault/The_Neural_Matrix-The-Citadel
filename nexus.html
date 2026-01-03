@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NEURAL MATRIX // NEXUS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/core.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .code-block { background: #111; border: 1px solid #333; border-radius: 8px; margin-bottom: 30px; position: relative; }
+        .code-header { background: #222; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; border-radius: 8px 8px 0 0; }
+        .lang-tag { color: #888; font-size: 0.8rem; font-weight: bold; }
+        .copy-btn { background: #00f3ff; color: #000; border: none; padding: 5px 15px; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 0.8rem; }
+        .copy-btn:active { transform: scale(0.95); }
+        pre { margin: 0; padding: 20px; color: #00ff9d; overflow-x: auto; white-space: pre-wrap; font-family: 'Space Mono', monospace; font-size: 0.9rem; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
+        .gallery-item { border: 1px solid #333; background: rgba(255,255,255,0.05); padding: 10px; text-align: center; }
+        .gallery-item img { max-width: 100%; border: 1px solid #00f3ff; }
+        .gallery-caption { margin-top: 10px; color: #aaa; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <script type="module" src="./js/overmind.js"></script>
+    <main class="core" style="margin-top:100px;">
+        <div class="glass-panel">
+            <h1 style="color:#00f3ff;">// THE NEXUS</h1>
+            <p>SECURE ASSET LIBRARY & CODE REPOSITORY.</p>
+            
+            <h3 style="border-bottom:1px solid #333; padding-bottom:10px; margin-top:40px;">:: COMMAND PROTOCOLS</h3>
+            
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="lang-tag">PYTHON // MAGNUS AGENT</span>
+                    <button class="copy-btn" onclick="copyCode(this)">COPY CODE</button>
+                </div>
+                <pre>import os, sys
+def initiate_uplink():
+    print(":: CONNECTING TO NEURAL MATRIX ::")
+    # Sovereign Logic Here
+    return True</pre>
+            </div>
+
+            <div class="code-block">
+                <div class="code-header">
+                    <span class="lang-tag">BASH // DEPLOYMENT</span>
+                    <button class="copy-btn" onclick="copyCode(this)">COPY CODE</button>
+                </div>
+                <pre>git add .
+git commit -m "System Upgrade"
+git push origin main</pre>
+            </div>
+
+            <h3 style="border-bottom:1px solid #333; padding-bottom:10px; margin-top:40px;">:: VISUAL ARTIFACTS</h3>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div style="height:150px; display:flex; align-items:center; justify-content:center; border:1px dashed #444; color:#666;">[IMAGE SLOT 01]</div>
+                    <div class="gallery-caption">Artifact: The Sphere</div>
+                </div>
+                <div class="gallery-item">
+                    <div style="height:150px; display:flex; align-items:center; justify-content:center; border:1px dashed #444; color:#666;">[IMAGE SLOT 02]</div>
+                    <div class="gallery-caption">Artifact: The Matrix</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <script>
+        function copyCode(btn) {
+            const pre = btn.parentElement.nextElementSibling;
+            navigator.clipboard.writeText(pre.innerText);
+            btn.innerText = "COPIED!";
+            setTimeout(() => btn.innerText = "COPY CODE", 2000);
+        }
+    </script>
+</body>
+</html>

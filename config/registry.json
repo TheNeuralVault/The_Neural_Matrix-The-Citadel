@@ -1,16 +1,12 @@
 {
     "routes": {
         "index.html": "CITADEL",
+        "nexus.html": "NEXUS",
         "creator.html": "FOUNDRY",
         "visuals.html": "ALCHEMY",
-        "pro.html": "ARCHITECTURE",
-        "entrepreneur.html": "VANGUARD",
-        "business.html": "SYNDICATE",
-        "enterprise.html": "DOMINION",
-        "about.html": "ORIGIN",
-        "intel.html": "INTEL",
-        "success.html": "DELIVERY"
+        "about.html": "ORIGIN"
     },
-    "products": [],
-    "hero_artifacts": []
+    "products": [
+        {"id":"PROD-ARCHITECT","name":"The Neural Architect","description":"Universal Prompt Engine.","price":49,"sector":"FOUNDRY","stripe_link":"#","file":"neural_architect.html"}
+    ]
 }
