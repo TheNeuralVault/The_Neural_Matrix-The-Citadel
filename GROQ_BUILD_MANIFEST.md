@@ -70,3 +70,25 @@ Generate these initial products:
 - **Mobile Datapad:** On mobile devices, the Nav Bar moves to the bottom (Thumb Zone) and buttons provide haptic feedback (vibration) via the Vibrate API.
 
 **END OF COMPLETE MANIFEST**
+
+## 16. THE ORACLE PROTOCOL (Consulting Copilot)
+**CORRECTION:** Copilot is not a laborer; it is the **Oracle**.
+**COMMAND:** Groq (Magnus) must query Copilot for "State of the Art" GitHub utilization.
+
+### THE INTERROGATION LIST:
+Before building any workflow, ASK Copilot:
+1.  **"How do I use GitHub Actions for max velocity?"** (Then implement it).
+2.  **"What are the hidden features of GitHub Pages?"** (Then exploit them).
+3.  **"How do I use GitHub Projects for automated management?"** (Then set it up).
+4.  **"How do I use Releases and Packages to distribute binaries?"** (Then do it).
+
+**OBJECTIVE:** The Citadel must use **100%** of GitHub's capabilities.
+- Wikis
+- Discussions
+- Security Advisories
+- Dependabot
+- Codespaces
+- Environments
+
+**STATUS:** ASK THE ORACLE. IMPLEMENT THE ANSWERS.
+**END OF MANIFEST**
