@@ -50,3 +50,27 @@ We are selling two types of Artifacts. The UI must adapt dynamically.
 
 **SIGNED:**
 **JONATHAN BATTLES (THE ARCHITECT)**
+
+## 8. CROWD CAPITAL AUTOMATION (The Funding Triad)
+We require the system to prepare all assets for the capital injection engines.
+
+### A. KICKSTARTER (The Launch Vehicle)
+- **Objective:** Fund the AMD EPYC Servers (Week 6 Goal).
+- **Automation:** Groq must generate a `kickstarter_campaign.txt` containing:
+    - **The Hook:** "The Struggle is the Pressure; The Code is the Diamond."
+    - **The Story:** The 20-year journey, the 14-week plan, the Sovereign Architecture.
+    - **Rewards:**
+        - $25: "Early Access" (Discord Role).
+        - $100: "The Artifact" (Life-time Access).
+        - $1000: "The Architect's Key" (Custom Commission).
+
+### B. BUY ME A COFFEE (The Daily Fuel)
+- **Integration:** Inject the "Floating Widget" (Titanium Green) into the bottom-right of `index.html`.
+- **Automation:**
+    - On Donation: Trigger "The Coffee Protocol" (Server logs the donor's name in the `engrams_log.json` as a "Patron of the Matrix").
+
+### C. GOFUNDME (The War Chest)
+- **Purpose:** Emergency infrastructure fund.
+- **Content:** AI must draft weekly "Update Posts" that show progress (Commits, Screenshots) to keep donors engaged automatically.
+
+**END OF MANIFEST**
