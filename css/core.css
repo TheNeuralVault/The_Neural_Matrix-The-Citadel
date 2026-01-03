@@ -1,27 +1,7 @@
-:root{--bg:#050505;--glass:rgba(10,10,10,0.85);--neon:#00f3ff;--gold:#ffd700;--font:'Space Mono',monospace;}
+:root{--bg:#050505;--glass:rgba(10,10,10,0.85);--neon:#00f3ff;--gold:#ffd700;--font:'Courier New',monospace;}
 body{margin:0;background:var(--bg);color:#fff;font-family:var(--font);overflow-x:hidden;}
 #matrix-canvas{position:fixed;top:0;left:0;z-index:-2;}
 #sphere-container{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;}
-
 .rail{position:fixed;top:0;width:100%;padding:15px;background:rgba(0,0,0,0.9);border-bottom:1px solid #333;display:flex;justify-content:center;gap:20px;z-index:999;flex-wrap:wrap;backdrop-filter:blur(10px);}
 .rail a{color:#666;text-decoration:none;font-size:0.8rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;transition:0.3s;}
-.rail a:hover, .rail a.active{color:var(--neon);text-shadow:0 0 10px var(--neon);}
-
-.core{max-width:1200px;margin:120px auto;padding:20px;}
-.glass-panel{background:var(--glass);border:1px solid #333;padding:40px;box-shadow:0 20px 50px rgba(0,0,0,0.5);}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:30px;margin-top:40px;}
-
-/* CARDS */
-.card{border:1px solid #333;padding:25px;background:rgba(255,255,255,0.02);transition:0.3s;position:relative;}
-.card:hover{border-color:var(--neon);transform:translateY(-5px);}
-.card h3{margin-top:0;color:#fff;} .card p{color:#ccc;font-size:0.9rem;}
-.meta{font-size:0.7rem;color:#666;margin-bottom:15px;letter-spacing:1px;}
-.price{font-size:1.5rem;color:var(--neon);margin:15px 0;font-weight:700;}
-.btn{display:block;width:100%;padding:15px;background:var(--neon);color:#000;text-align:center;font-weight:700;text-decoration:none;letter-spacing:2px;}
-.card.t-hero{border-color:var(--neon);box-shadow:0 0 20px rgba(0,243,255,0.15);}
-
-/* HERO DISPLAY (Homepage) */
-.hero-display{display:flex;justify-content:center;gap:20px;margin-bottom:40px;pointer-events:none;}
-.hero-card{border:1px solid var(--neon);padding:20px;background:rgba(0,243,255,0.1);text-align:center;}
-.hero-card h3{margin:0;font-size:1rem;color:#fff;}
-.glitch-text{font-size:0.7rem;color:var(--neon);letter-spacing:2px;}
+.rail a:hover{color:var(--neon);text-shadow:0 0 10px var(--neon);}
