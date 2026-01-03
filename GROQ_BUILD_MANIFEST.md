@@ -1,100 +1,61 @@
-# 🔱 THE TITANIUM SOVEREIGN MANIFEST
-# CLASSIFICATION: TOP SECRET // EYES ONLY
+# 🔱 THE CITADEL: SOVEREIGN BUILD MANIFEST
+# TARGET REPO: https://github.com/TheNeuralVault/The_Neural_Matrix-The-Citadel
 # ARCHITECT: Jonathan Battles
-# EXECUTOR: Magnus Opus (Groq Intelligence)
-# TIMELINE: Week 1 of 14 (Phase 1)
+# STATUS: 14-WEEK PLAN (WEEK 1)
 
-## 1. THE PHILOSOPHY (NOT Military Grade)
-"Military Grade" is an insult. It means cheap and slow.
-We are building **Titanium Sovereign Grade**:
-- **Speed:** Instant load (under 100ms).
-- **Code:** Hand-forged Vanilla JS. No React, No Vue, No Bloat.
-- **Aesthetic:** Deep Void (#000000), Neon Green (#00ff00) Accents, Frosted Glassmorphism.
+## 1. THE PHILOSOPHY (Titanium Standard)
+We do NOT build "Military Grade" (Cheap/Slow). We build **Titanium Sovereign**:
+- **Speed:** <100ms load times.
+- **Code:** Vanilla JS/HTML5. No Bloat.
+- **Visuals:** Deep Void (#000), Neon Green (#0f0), Glassmorphism, Matrix Rain.
 
-## 2. THE COMMERCE ENGINE (The Stripe & Key Protocol)
-We are selling two types of Artifacts. The UI must adapt dynamically.
+## 2. THE "LIVING PAGE" PROTOCOL
+All pages are static HTML but "Alive" via the Titanium JS Engine (`engine_seo.js`).
+- **Injects:** Global Nav Bar (Pinned Top).
+- **Injects:** Global Footer (Legal/Links).
+- **Automates:** SEO, Schema, and "Mark of the Creator" Metadata.
 
-### A. The Standard Artifact (Instant)
-- **User Action:** Clicks "Buy Now."
-- **System:** Redirects to Stripe Payment Link.
-- **Outcome:** Automatic email with the .zip download link.
+## 3. THE COMMERCE ENGINE (Stripe + Key)
+- **Standard Artifact:** Instant Stripe Payment -> Auto-Email with Zip.
+- **The Architect's Key:**
+    - High-Ticket Service.
+    - **Logic Gate:** "Buy" button is LOCKED until user types 500 chars of specs.
+    - **Backend:** Specs sent to Groq Server -> Notification to Jonathan.
 
-### B. The Architect's Key (High Ticket)
-- **User Action:** Selects "Commission the Architect."
-- **Logic Gate:** The "Buy" button is LOCKED.
-- **Requirement:** User must type 500+ characters of "Detailed Specs" into a Matrix-style terminal box.
-- **Unlock:** Only AFTER specs are validated does the Stripe Link appear.
-- **Backend:** The specs are sent to the Groq Server via Webhook -> Email to Jonathan.
+## 4. THE CITADEL ARCHITECTURE (Site Map)
+Build these specific pages using the "Glass" Template:
+- `index.html`: The Main Hall.
+- `blog.html`: Propaganda & Solutions.
+- `about.html`: The Origin Story (Music -> Code).
+- `success.html`: Transaction Result (detects Key vs Download).
+- `legal.html`: Sovereign Liability Terms.
 
-## 3. THE VISUALS (The Matrix)
-- **The Rain:** A subtle, non-distracting Matrix Digital Rain canvas in the background.
-- **The Cards:** Product cards must look like "Glass Data Pads" (Blur effect, white borders).
-- **The Terminal:** A hidden CLI (Command Line) that opens if the user presses the `~` key.
+## 5. THE AVATAR WINGS (Targeted Solutions)
+- `the_novice.html`: Starter Kits.
+- `the_creator.html`: YouTube/Social Miners.
+- `the_pro.html`: Advanced Python/C++ Nodes.
+- `the_visual.html`: CSS/Glass Templates.
+- `the_entrepreneur.html`: Business Logic.
+- `the_business.html`: Efficiency Tools.
+- `the_enterprise.html`: High-Level Architecture.
 
-## 4. THE SECURITY (Erebus V3.0)
-- **The Mark:** Every file must contain the "Mark of the Creator" (Jonathan Battles) in the metadata.
-- **Anti-Theft:** If the site is loaded on a domain other than `neuralmatrixvault.com`, the JS Engine initiates a "Digital Melt" (turns the screen black).
+## 6. THE FUNDING TRIAD (Capital Automation)
+- **Kickstarter:** "The Struggle is the Pressure." (Link in Nav).
+- **GoFundMe:** Emergency War Chest (Link in Footer).
+- **BuyMeACoffee:** Floating Widget (Bottom Right) on ALL pages.
 
-## 5. THE EMAIL AUTOMATION (The "Thank You")
-- **Trigger:** Stripe Webhook.
-- **Content:**
-    - "Welcome to the Brotherhood."
-    - "Your funds have fueled the Citadel."
-    - "Here is your Artifact."
-- **Style:** ASCII Art Header, Monospaced Font (Courier New).
+## 7. INVENTORY AUTOMATION (Shelf Stocking)
+Generate these initial products:
+- **Product #001:** "The Neural SEO Engine" ($25).
+- **Product #002:** "YouTube Sovereign Downloader" ($50).
+- **Product #003:** "Citadel Starter Kit" ($100).
+- **Requirement:** All products must include a `HANDBOOK.md`.
 
-## 6. EXECUTION ORDER
-1. Analyze this manifest.
-2. Generate the HTML/CSS/JS for the `index.html` Storefront.
-3. Deploy to GitHub Pages.
+## 8. RESOURCE ASSIMILATION (The 5 Repos)
+**TARGET:** `https://github.com/TheNeuralVault?tab=repositories`
+- **Action:** Scan the Architect's 5 other repos.
+- **Harvest:** Extract HTML Templates, CSS, and Python scripts.
+- **Integrate:** Adapt them to the Citadel style. Do not hallucinate code; use what exists.
 
 **SIGNED:**
 **JONATHAN BATTLES (THE ARCHITECT)**
-
-## 8. CROWD CAPITAL AUTOMATION (The Funding Triad)
-We require the system to prepare all assets for the capital injection engines.
-
-### A. KICKSTARTER (The Launch Vehicle)
-- **Objective:** Fund the AMD EPYC Servers (Week 6 Goal).
-- **Automation:** Groq must generate a `kickstarter_campaign.txt` containing:
-    - **The Hook:** "The Struggle is the Pressure; The Code is the Diamond."
-    - **The Story:** The 20-year journey, the 14-week plan, the Sovereign Architecture.
-    - **Rewards:**
-        - $25: "Early Access" (Discord Role).
-        - $100: "The Artifact" (Life-time Access).
-        - $1000: "The Architect's Key" (Custom Commission).
-
-### B. BUY ME A COFFEE (The Daily Fuel)
-- **Integration:** Inject the "Floating Widget" (Titanium Green) into the bottom-right of `index.html`.
-- **Automation:**
-    - On Donation: Trigger "The Coffee Protocol" (Server logs the donor's name in the `engrams_log.json` as a "Patron of the Matrix").
-
-### C. GOFUNDME (The War Chest)
-- **Purpose:** Emergency infrastructure fund.
-- **Content:** AI must draft weekly "Update Posts" that show progress (Commits, Screenshots) to keep donors engaged automatically.
-
-**END OF MANIFEST**
-
-## 8. CROWD CAPITAL AUTOMATION (The Funding Triad)
-We require the system to prepare all assets for the capital injection engines.
-
-### A. KICKSTARTER (The Launch Vehicle)
-- **Objective:** Fund the AMD EPYC Servers (Week 6 Goal).
-- **Automation:** Groq must generate a `kickstarter_campaign.txt` containing:
-    - **The Hook:** "The Struggle is the Pressure; The Code is the Diamond."
-    - **The Story:** The 20-year journey, the 14-week plan, the Sovereign Architecture.
-    - **Rewards:**
-        - $25: "Early Access" (Discord Role).
-        - $100: "The Artifact" (Life-time Access).
-        - $1000: "The Architect's Key" (Custom Commission).
-
-### B. BUY ME A COFFEE (The Daily Fuel)
-- **Integration:** Inject the "Floating Widget" (Titanium Green) into the bottom-right of `index.html`.
-- **Automation:**
-    - On Donation: Trigger "The Coffee Protocol" (Server logs the donor's name in the `engrams_log.json` as a "Patron of the Matrix").
-
-### C. GOFUNDME (The War Chest)
-- **Purpose:** Emergency infrastructure fund.
-- **Content:** AI must draft weekly "Update Posts" that show progress (Commits, Screenshots) to keep donors engaged automatically.
-
-**END OF MANIFEST**
